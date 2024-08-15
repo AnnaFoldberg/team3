@@ -1,0 +1,92 @@
+# Operating System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Log files
+*.log
+
+# Dependency directories
+node_modules/
+vendor/
+package-lock.json
+yarn.lock
+
+# Build output
+build/
+dist/
+out/
+
+# IDE/Editor directories and files
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.swp
+*.swo
+
+# Python specific
+__pycache__/
+*.pyc
+*.pyo
+
+# Java specific
+*.class
+*.jar
+*.war
+*.ear
+
+# C# specific
+*.csproj.user
+*.suo
+*.user
+*.dll
+*.exe
+*.pdb
+
+# Ruby specific
+*.gem
+.bundle/
+log/
+tmp/
+
+# PHP specific
+*.php~
+*.phar
+*.sql
+vendor/
+
+# Swift specific
+*.xcodeproj/
+*.xcworkspace/
+*.xcuserdata/
+
+# Other common files
+*.tmp
+*.bak
+
+# Configuration files
+*.env
+
+# Docker files
+docker-compose.override.yml
+Dockerfile
+
+# Database files
+*.sqlite
+*.db
+
+# Coverage reports
+coverage/
+*.lcov
+
+# npm
+npm-debug.log
+yarn-error.log
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
