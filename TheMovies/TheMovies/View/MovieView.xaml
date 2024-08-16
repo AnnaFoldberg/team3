@@ -1,12 +1,18 @@
-﻿<Window x:Class="TheMovies.MainWindow"
+﻿<Window x:Class="TheMovies.MovieView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TheMovies"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MovieView" Height="450" Width="800">
     <Grid>
-
+        <TextBox x:Name="tbTitle" HorizontalAlignment="Left" Margin="220,115,0,0" TextWrapping="Wrap" Text="{Binding Title}" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbDuration" HorizontalAlignment="Left" Margin="220,154,0,0" TextWrapping="Wrap" Text="{Binding Duration}" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name= "tbGenre" HorizontalAlignment="Left" Margin="220,199,0,0" TextWrapping="Wrap" Text="{Binding Genre}" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Titel" HorizontalAlignment="Left" Margin="113,111,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.675,-2.876"/>
+        <Label Content="Varighed" HorizontalAlignment="Left" Margin="113,150,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.675,-2.876"/>
+        <Label Content="Genre" HorizontalAlignment="Left" Margin="113,195,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.675,-2.876"/>
+        <Button x:Name="btnAddMovie" Content="Opret" HorizontalAlignment="Left" Margin="240,262,0,0" VerticalAlignment="Top" Command="{Binding AddMovieCommand}" RenderTransformOrigin="2.056,-0.402"/>
     </Grid>
 </Window>

@@ -9,15 +9,18 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace TheMovies;
-
-/// <summary>
-/// Interaction logic for MainWindow.xaml
-/// </summary>
-public partial class MainWindow : Window
+namespace TheMovies
 {
-    public MainWindow()
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
+    public partial class MovieView : Window
     {
-        InitializeComponent();
+        public MovieView()
+        {
+            InitializeComponent();
+
+            DataContext = new MovieViewModel();
+        }
     }
 }
