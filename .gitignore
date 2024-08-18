@@ -90,3 +90,7 @@ yarn-error.log
 *.tmp
 *.temp
 *.bak
+
+# Ignore build output directories
+bin/
+obj/
