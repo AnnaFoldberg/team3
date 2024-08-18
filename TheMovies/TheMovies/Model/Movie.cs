@@ -34,7 +34,7 @@ namespace TheMovies
 
         public string ToString()
         {
-            return $"Titel: {_title}, $Varighed: { _duration}, $Genre: { _genre}";
+            return $"Titel: {_title}, Varighed: { _duration}, Genre: { _genre}";
         }
     }
 }

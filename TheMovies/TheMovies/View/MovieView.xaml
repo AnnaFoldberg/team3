@@ -14,5 +14,6 @@
         <Label Content="Varighed" HorizontalAlignment="Left" Margin="113,150,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.675,-2.876"/>
         <Label Content="Genre" HorizontalAlignment="Left" Margin="113,195,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.675,-2.876"/>
         <Button x:Name="btnAddMovie" Content="Opret" HorizontalAlignment="Left" Margin="240,262,0,0" VerticalAlignment="Top" Command="{Binding AddMovieCommand}" RenderTransformOrigin="2.056,-0.402"/>
+        <Label x:Name="lblMessage" Content="{Binding Message}" HorizontalAlignment="Left" Margin="113,285,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.675,-2.876"/>
     </Grid>
 </Window>
