@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "G:\\Visual Studio Projects\\The Movies\\TheMovies\\TheMovies\\TheMovies.csproj": {}
+    "G:\\Visual Studio Projects\\The movies\\TheMovies\\TheMovies\\TheMovies.csproj": {}
   },
   "projects": {
-    "G:\\Visual Studio Projects\\The Movies\\TheMovies\\TheMovies\\TheMovies.csproj": {
+    "G:\\Visual Studio Projects\\The movies\\TheMovies\\TheMovies\\TheMovies.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\Visual Studio Projects\\The Movies\\TheMovies\\TheMovies\\TheMovies.csproj",
+        "projectUniqueName": "G:\\Visual Studio Projects\\The movies\\TheMovies\\TheMovies\\TheMovies.csproj",
         "projectName": "TheMovies",
-        "projectPath": "G:\\Visual Studio Projects\\The Movies\\TheMovies\\TheMovies\\TheMovies.csproj",
+        "projectPath": "G:\\Visual Studio Projects\\The movies\\TheMovies\\TheMovies\\TheMovies.csproj",
         "packagesPath": "C:\\Users\\Eske\\.nuget\\packages\\",
         "outputPath": "G:\\Visual Studio Projects\\The Movies\\TheMovies\\TheMovies\\obj\\",
         "projectStyle": "PackageReference",
