@@ -12,11 +12,6 @@ namespace TheMovies
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private void OnPropertyChanged(string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
         private string _title;
         private TimeSpan _duration;
         private string _genre;
@@ -92,8 +87,13 @@ namespace TheMovies
             // Bruges midlertidigt til at kunne se, at filmen findes i _movieRepo
             foreach (var mov in _movieRepo.GetAll())
             {
-                MessageBox.Show(mov.ToString());
+                MessageBox.Show(mov.ToString()); 
             }
+        }
+
+        private void OnPropertyChanged(string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }
