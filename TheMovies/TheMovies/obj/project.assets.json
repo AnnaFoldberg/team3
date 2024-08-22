@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Bruger\\source\\repos\\MOVTeam3\\team3\\TheMovies\\TheMovies\\TheMovies.csproj",
+      "projectUniqueName": "C:\\Users\\Bruger\\source\\repos\\team3\\TheMovies\\TheMovies\\TheMovies.csproj",
       "projectName": "TheMovies",
-      "projectPath": "C:\\Users\\Bruger\\source\\repos\\MOVTeam3\\team3\\TheMovies\\TheMovies\\TheMovies.csproj",
+      "projectPath": "C:\\Users\\Bruger\\source\\repos\\team3\\TheMovies\\TheMovies\\TheMovies.csproj",
       "packagesPath": "C:\\Users\\Bruger\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Bruger\\source\\repos\\MOVTeam3\\team3\\TheMovies\\TheMovies\\obj\\",
+      "outputPath": "C:\\Users\\Bruger\\source\\repos\\team3\\TheMovies\\TheMovies\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Bruger\\AppData\\Roaming\\NuGet\\NuGet.Config",

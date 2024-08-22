@@ -1,0 +1,14 @@
+using System;
+using System.Collections;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Windows.Input;
+using System.Diagnostics;
+using System.Windows;
+
+namespace TheMovies
+{
+    public class MainViewModel
+    {
+    }
+}
