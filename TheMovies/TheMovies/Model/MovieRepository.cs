@@ -1,5 +1,3 @@
-using System;
-using System.Diagnostics;
 using System.Windows;
 
 namespace TheMovies
@@ -23,7 +21,7 @@ namespace TheMovies
         public MovieRepository()
         {
             _movieRepo = new List<Movie>();
-            
+
             desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
             filePath = System.IO.Path.Combine(desktopPath, "Uge33-TheMovies.csv");  //filen skal gemmes i skrivebordet for at virke
         }

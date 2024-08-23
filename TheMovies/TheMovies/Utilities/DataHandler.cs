@@ -1,5 +1,3 @@
-using System;
-
 namespace TheMovies
 {
     public class DataHandler

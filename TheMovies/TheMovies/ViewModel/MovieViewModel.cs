@@ -1,9 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Windows.Input;
-using System.Diagnostics;
 using System.Windows;
 
 namespace TheMovies
@@ -17,7 +12,7 @@ namespace TheMovies
         private string _genre;
 
         private string _message;
-        
+
         public string Title
         {
             get { return _title; }
@@ -61,7 +56,7 @@ namespace TheMovies
         private MovieRepository _movieRepo = new MovieRepository();
 
         // public ObservableCollection<Movie> Movies { get; set; } = new ObservableCollection<Movie>();
-        
+
         // Den første => bruges som en expression-bodied property, hvilket er en kortere måde
         // at definere en property, som returnerer en enkelt expression.
         // I dette tilfælde returneres en ny RelayCommand instans.
@@ -87,7 +82,7 @@ namespace TheMovies
             // Bruges midlertidigt til at kunne se, at filmen findes i _movieRepo
             foreach (var mov in _movieRepo.GetAll())
             {
-                MessageBox.Show(mov.ToString()); 
+                MessageBox.Show(mov.ToString());
             }
         }
 

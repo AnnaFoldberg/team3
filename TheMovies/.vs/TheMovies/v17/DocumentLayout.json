@@ -1,34 +1,50 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "G:\\Visual Studio Projects\\The Movies\\TheMovies\\",
+  "WorkspaceRootPath": "D:\\C#\\2.Semester\\ProjectTheMovies\\team3\\TheMovies\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{21EA30C9-D891-4CDA-8C70-D7E01D2C57AF}|TheMovies\\TheMovies.csproj|g:\\visual studio projects\\the movies\\themovies\\themovies\\model\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21EA30C9-D891-4CDA-8C70-D7E01D2C57AF}|TheMovies\\TheMovies.csproj|solutionrelative:themovies\\model\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21EA30C9-D891-4CDA-8C70-D7E01D2C57AF}|TheMovies\\TheMovies.csproj|g:\\visual studio projects\\the movies\\themovies\\themovies\\model\\movierepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21EA30C9-D891-4CDA-8C70-D7E01D2C57AF}|TheMovies\\TheMovies.csproj|solutionrelative:themovies\\model\\movierepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21EA30C9-D891-4CDA-8C70-D7E01D2C57AF}|TheMovies\\TheMovies.csproj|g:\\visual studio projects\\the movies\\themovies\\themovies\\model\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21EA30C9-D891-4CDA-8C70-D7E01D2C57AF}|TheMovies\\TheMovies.csproj|solutionrelative:themovies\\model\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21EA30C9-D891-4CDA-8C70-D7E01D2C57AF}|TheMovies\\TheMovies.csproj|g:\\visual studio projects\\the movies\\themovies\\themovies\\viewmodel\\movieviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{21EA30C9-D891-4CDA-8C70-D7E01D2C57AF}|TheMovies\\TheMovies.csproj|d:\\c#\\2.semester\\projectthemovies\\team3\\themovies\\themovies\\viewmodel\\movieviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{21EA30C9-D891-4CDA-8C70-D7E01D2C57AF}|TheMovies\\TheMovies.csproj|solutionrelative:themovies\\viewmodel\\movieviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{21EA30C9-D891-4CDA-8C70-D7E01D2C57AF}|TheMovies\\TheMovies.csproj|g:\\visual studio projects\\the movies\\themovies\\themovies\\view\\movieview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{21EA30C9-D891-4CDA-8C70-D7E01D2C57AF}|TheMovies\\TheMovies.csproj|d:\\c#\\2.semester\\projectthemovies\\team3\\themovies\\themovies\\view\\movieview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21EA30C9-D891-4CDA-8C70-D7E01D2C57AF}|TheMovies\\TheMovies.csproj|solutionrelative:themovies\\view\\movieview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21EA30C9-D891-4CDA-8C70-D7E01D2C57AF}|TheMovies\\TheMovies.csproj|d:\\c#\\2.semester\\projectthemovies\\team3\\themovies\\themovies\\view\\movieview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{21EA30C9-D891-4CDA-8C70-D7E01D2C57AF}|TheMovies\\TheMovies.csproj|solutionrelative:themovies\\view\\movieview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{21EA30C9-D891-4CDA-8C70-D7E01D2C57AF}|TheMovies\\TheMovies.csproj|g:\\visual studio projects\\the movies\\themovies\\themovies\\model\\datahandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21EA30C9-D891-4CDA-8C70-D7E01D2C57AF}|TheMovies\\TheMovies.csproj|solutionrelative:themovies\\model\\datahandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{21EA30C9-D891-4CDA-8C70-D7E01D2C57AF}|TheMovies\\TheMovies.csproj|d:\\c#\\2.semester\\projectthemovies\\team3\\themovies\\themovies\\view\\mainview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{21EA30C9-D891-4CDA-8C70-D7E01D2C57AF}|TheMovies\\TheMovies.csproj|solutionrelative:themovies\\view\\mainview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{21EA30C9-D891-4CDA-8C70-D7E01D2C57AF}|TheMovies\\TheMovies.csproj|g:\\visual studio projects\\the movies\\themovies\\themovies\\model\\irepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21EA30C9-D891-4CDA-8C70-D7E01D2C57AF}|TheMovies\\TheMovies.csproj|solutionrelative:themovies\\model\\irepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{21EA30C9-D891-4CDA-8C70-D7E01D2C57AF}|TheMovies\\TheMovies.csproj|d:\\c#\\2.semester\\projectthemovies\\team3\\themovies\\themovies\\view\\greeting.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{21EA30C9-D891-4CDA-8C70-D7E01D2C57AF}|TheMovies\\TheMovies.csproj|solutionrelative:themovies\\view\\greeting.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21EA30C9-D891-4CDA-8C70-D7E01D2C57AF}|TheMovies\\TheMovies.csproj|d:\\c#\\2.semester\\projectthemovies\\team3\\themovies\\themovies\\view\\programview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{21EA30C9-D891-4CDA-8C70-D7E01D2C57AF}|TheMovies\\TheMovies.csproj|solutionrelative:themovies\\view\\programview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21EA30C9-D891-4CDA-8C70-D7E01D2C57AF}|TheMovies\\TheMovies.csproj|d:\\c#\\2.semester\\projectthemovies\\team3\\themovies\\themovies\\view\\programview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21EA30C9-D891-4CDA-8C70-D7E01D2C57AF}|TheMovies\\TheMovies.csproj|solutionrelative:themovies\\view\\programview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21EA30C9-D891-4CDA-8C70-D7E01D2C57AF}|TheMovies\\TheMovies.csproj|d:\\c#\\2.semester\\projectthemovies\\team3\\themovies\\themovies\\view\\mainview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21EA30C9-D891-4CDA-8C70-D7E01D2C57AF}|TheMovies\\TheMovies.csproj|solutionrelative:themovies\\view\\mainview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21EA30C9-D891-4CDA-8C70-D7E01D2C57AF}|TheMovies\\TheMovies.csproj|d:\\c#\\2.semester\\projectthemovies\\team3\\themovies\\themovies\\viewmodel\\programviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21EA30C9-D891-4CDA-8C70-D7E01D2C57AF}|TheMovies\\TheMovies.csproj|solutionrelative:themovies\\viewmodel\\programviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21EA30C9-D891-4CDA-8C70-D7E01D2C57AF}|TheMovies\\TheMovies.csproj|d:\\c#\\2.semester\\projectthemovies\\team3\\themovies\\themovies\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{21EA30C9-D891-4CDA-8C70-D7E01D2C57AF}|TheMovies\\TheMovies.csproj|solutionrelative:themovies\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21EA30C9-D891-4CDA-8C70-D7E01D2C57AF}|TheMovies\\TheMovies.csproj|d:\\c#\\2.semester\\projectthemovies\\team3\\themovies\\themovies\\viewmodel\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21EA30C9-D891-4CDA-8C70-D7E01D2C57AF}|TheMovies\\TheMovies.csproj|solutionrelative:themovies\\viewmodel\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,121 +54,149 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MovieView.xaml",
-              "DocumentMoniker": "G:\\Visual Studio Projects\\The Movies\\TheMovies\\TheMovies\\View\\MovieView.xaml",
-              "RelativeDocumentMoniker": "TheMovies\\View\\MovieView.xaml",
-              "ToolTip": "TheMovies/TheMovies/View/MovieView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "OverriddenGroupName": "TheMovies\\TheMovies\\View",
-              "OverriddenToolTip": "TheMovies/TheMovies/View/MovieView.xaml",
-              "WhenOpened": "2024-08-19T07:00:33.837Z",
+              "DocumentIndex": 0,
+              "Title": "MovieViewModel.cs",
+              "DocumentMoniker": "D:\\C#\\2.Semester\\ProjectTheMovies\\team3\\TheMovies\\TheMovies\\ViewModel\\MovieViewModel.cs",
+              "RelativeDocumentMoniker": "TheMovies\\ViewModel\\MovieViewModel.cs",
+              "ToolTip": "D:\\C#\\2.Semester\\ProjectTheMovies\\team3\\TheMovies\\TheMovies\\ViewModel\\MovieViewModel.cs",
+              "RelativeToolTip": "TheMovies\\ViewModel\\MovieViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-23T13:08:09.242Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "MovieViewModel.cs",
-              "DocumentMoniker": "G:\\Visual Studio Projects\\The Movies\\TheMovies\\TheMovies\\ViewModel\\MovieViewModel.cs",
-              "RelativeDocumentMoniker": "TheMovies\\ViewModel\\MovieViewModel.cs",
-              "ToolTip": "G:\\Visual Studio Projects\\The Movies\\TheMovies\\TheMovies\\ViewModel\\MovieViewModel.cs",
-              "RelativeToolTip": "TheMovies\\ViewModel\\MovieViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "OverriddenGroupName": "TheMovies\\TheMovies\\ViewModel",
-              "WhenOpened": "2024-08-19T07:00:37.402Z",
+              "Title": "MainView.xaml",
+              "DocumentMoniker": "D:\\C#\\2.Semester\\ProjectTheMovies\\team3\\TheMovies\\TheMovies\\View\\MainView.xaml",
+              "RelativeDocumentMoniker": "TheMovies\\View\\MainView.xaml",
+              "ToolTip": "D:\\C#\\2.Semester\\ProjectTheMovies\\team3\\TheMovies\\TheMovies\\View\\MainView.xaml",
+              "RelativeToolTip": "TheMovies\\View\\MainView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-08-22T14:05:12.092Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "RelayCommand.cs",
-              "DocumentMoniker": "G:\\Visual Studio Projects\\The Movies\\TheMovies\\TheMovies\\Model\\RelayCommand.cs",
-              "RelativeDocumentMoniker": "TheMovies\\Model\\RelayCommand.cs",
-              "ToolTip": "G:\\Visual Studio Projects\\The Movies\\TheMovies\\TheMovies\\Model\\RelayCommand.cs",
-              "RelativeToolTip": "TheMovies\\Model\\RelayCommand.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADIAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "OverriddenGroupName": "TheMovies\\TheMovies\\Model",
-              "WhenOpened": "2024-08-19T07:00:32.239Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MovieRepository.cs",
-              "DocumentMoniker": "G:\\Visual Studio Projects\\The Movies\\TheMovies\\TheMovies\\Model\\MovieRepository.cs",
-              "RelativeDocumentMoniker": "TheMovies\\Model\\MovieRepository.cs",
-              "ToolTip": "G:\\Visual Studio Projects\\The Movies\\TheMovies\\TheMovies\\Model\\MovieRepository.cs",
-              "RelativeToolTip": "TheMovies\\Model\\MovieRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "OverriddenGroupName": "TheMovies\\TheMovies\\Model",
-              "WhenOpened": "2024-08-19T07:00:31.614Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Movie.cs",
-              "DocumentMoniker": "G:\\Visual Studio Projects\\The Movies\\TheMovies\\TheMovies\\Model\\Movie.cs",
-              "RelativeDocumentMoniker": "TheMovies\\Model\\Movie.cs",
-              "ToolTip": "G:\\Visual Studio Projects\\The Movies\\TheMovies\\TheMovies\\Model\\Movie.cs",
-              "RelativeToolTip": "TheMovies\\Model\\Movie.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "OverriddenGroupName": "TheMovies\\TheMovies\\Model",
-              "WhenOpened": "2024-08-19T07:00:30.77Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IRepo.cs",
-              "DocumentMoniker": "G:\\Visual Studio Projects\\The Movies\\TheMovies\\TheMovies\\Model\\IRepo.cs",
-              "RelativeDocumentMoniker": "TheMovies\\Model\\IRepo.cs",
-              "ToolTip": "G:\\Visual Studio Projects\\The Movies\\TheMovies\\TheMovies\\Model\\IRepo.cs",
-              "RelativeToolTip": "TheMovies\\Model\\IRepo.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-19T07:00:28.4Z",
+              "Title": "MovieView.xaml",
+              "DocumentMoniker": "D:\\C#\\2.Semester\\ProjectTheMovies\\team3\\TheMovies\\TheMovies\\View\\MovieView.xaml",
+              "RelativeDocumentMoniker": "TheMovies\\View\\MovieView.xaml",
+              "ToolTip": "D:\\C#\\2.Semester\\ProjectTheMovies\\team3\\TheMovies\\TheMovies\\View\\MovieView.xaml",
+              "RelativeToolTip": "TheMovies\\View\\MovieView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-08-23T09:48:18.309Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "DataHandler.cs",
-              "DocumentMoniker": "G:\\Visual Studio Projects\\The Movies\\TheMovies\\TheMovies\\Model\\DataHandler.cs",
-              "RelativeDocumentMoniker": "TheMovies\\Model\\DataHandler.cs",
-              "ToolTip": "G:\\Visual Studio Projects\\The Movies\\TheMovies\\TheMovies\\Model\\DataHandler.cs",
-              "RelativeToolTip": "TheMovies\\Model\\DataHandler.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "OverriddenGroupName": "TheMovies\\TheMovies\\Model",
-              "WhenOpened": "2024-08-19T07:00:27.465Z",
+              "Title": "ProgramView.xaml",
+              "DocumentMoniker": "D:\\C#\\2.Semester\\ProjectTheMovies\\team3\\TheMovies\\TheMovies\\View\\ProgramView.xaml",
+              "RelativeDocumentMoniker": "TheMovies\\View\\ProgramView.xaml",
+              "ToolTip": "D:\\C#\\2.Semester\\ProjectTheMovies\\team3\\TheMovies\\TheMovies\\View\\ProgramView.xaml",
+              "RelativeToolTip": "TheMovies\\View\\ProgramView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-08-23T07:33:23.403Z",
               "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 2124,
-          "SelectedChildIndex": -1,
-          "Children": [
+            },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MainViewModel.cs",
+              "DocumentMoniker": "D:\\C#\\2.Semester\\ProjectTheMovies\\team3\\TheMovies\\TheMovies\\ViewModel\\MainViewModel.cs",
+              "RelativeDocumentMoniker": "TheMovies\\ViewModel\\MainViewModel.cs",
+              "ToolTip": "D:\\C#\\2.Semester\\ProjectTheMovies\\team3\\TheMovies\\TheMovies\\ViewModel\\MainViewModel.cs",
+              "RelativeToolTip": "TheMovies\\ViewModel\\MainViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-23T10:13:15.86Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProgramView.xaml.cs",
+              "DocumentMoniker": "D:\\C#\\2.Semester\\ProjectTheMovies\\team3\\TheMovies\\TheMovies\\View\\ProgramView.xaml.cs",
+              "RelativeDocumentMoniker": "TheMovies\\View\\ProgramView.xaml.cs",
+              "ToolTip": "D:\\C#\\2.Semester\\ProjectTheMovies\\team3\\TheMovies\\TheMovies\\View\\ProgramView.xaml.cs",
+              "RelativeToolTip": "TheMovies\\View\\ProgramView.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAQwAwAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-23T10:24:20.466Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Greeting.xaml",
+              "DocumentMoniker": "D:\\C#\\2.Semester\\ProjectTheMovies\\team3\\TheMovies\\TheMovies\\View\\Greeting.xaml",
+              "RelativeDocumentMoniker": "TheMovies\\View\\Greeting.xaml",
+              "ToolTip": "D:\\C#\\2.Semester\\ProjectTheMovies\\team3\\TheMovies\\TheMovies\\View\\Greeting.xaml",
+              "RelativeToolTip": "TheMovies\\View\\Greeting.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-08-23T11:59:41.389Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MovieView.xaml.cs",
+              "DocumentMoniker": "D:\\C#\\2.Semester\\ProjectTheMovies\\team3\\TheMovies\\TheMovies\\View\\MovieView.xaml.cs",
+              "RelativeDocumentMoniker": "TheMovies\\View\\MovieView.xaml.cs",
+              "ToolTip": "D:\\C#\\2.Semester\\ProjectTheMovies\\team3\\TheMovies\\TheMovies\\View\\MovieView.xaml.cs",
+              "RelativeToolTip": "TheMovies\\View\\MovieView.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-23T11:48:07.759Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MainView.xaml.cs",
+              "DocumentMoniker": "D:\\C#\\2.Semester\\ProjectTheMovies\\team3\\TheMovies\\TheMovies\\View\\MainView.xaml.cs",
+              "RelativeDocumentMoniker": "TheMovies\\View\\MainView.xaml.cs",
+              "ToolTip": "D:\\C#\\2.Semester\\ProjectTheMovies\\team3\\TheMovies\\TheMovies\\View\\MainView.xaml.cs",
+              "RelativeToolTip": "TheMovies\\View\\MainView.xaml.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAAABwAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-23T05:37:11.29Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ProgramViewModel.cs",
+              "DocumentMoniker": "D:\\C#\\2.Semester\\ProjectTheMovies\\team3\\TheMovies\\TheMovies\\ViewModel\\ProgramViewModel.cs",
+              "RelativeDocumentMoniker": "TheMovies\\ViewModel\\ProgramViewModel.cs",
+              "ToolTip": "D:\\C#\\2.Semester\\ProjectTheMovies\\team3\\TheMovies\\TheMovies\\ViewModel\\ProgramViewModel.cs",
+              "RelativeToolTip": "TheMovies\\ViewModel\\ProgramViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-23T10:22:52.595Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "App.xaml",
+              "DocumentMoniker": "D:\\C#\\2.Semester\\ProjectTheMovies\\team3\\TheMovies\\TheMovies\\App.xaml",
+              "RelativeDocumentMoniker": "TheMovies\\App.xaml",
+              "ToolTip": "D:\\C#\\2.Semester\\ProjectTheMovies\\team3\\TheMovies\\TheMovies\\App.xaml",
+              "RelativeToolTip": "TheMovies\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-08-23T11:58:01.622Z",
+              "EditorCaption": ""
             }
           ]
         }

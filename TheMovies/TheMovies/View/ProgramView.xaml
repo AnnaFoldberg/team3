@@ -1,4 +1,4 @@
-<Window x:Class="TheMovies.ProgramView"
+<Page x:Class="TheMovies.ProgramView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,7 +6,16 @@
         xmlns:local="clr-namespace:TheMovies"
         mc:Ignorable="d"
         Title="ProgramView" Height="450" Width="800">
-        <Grid>
-            <!-- Your UI elements go here -->
-        </Grid>
-</Window>
+    <Grid>
+        <ComboBox x:Name="Dropdown_Maanede" HorizontalAlignment="Left" Margin="20,10,0,0" VerticalAlignment="Top" Width="427" SelectionChanged="Dropdown_Maanede_SelectionChanged"/>
+        <ListBox x:Name="ListBox_OprettetForestilling" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="474,10,140,48" SelectionChanged="ListBox_OprettetForestilling_SelectionChanged"/>
+        <ListBox x:Name="ListBox_TilgaengligSalOgTidspunkt" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="20,190,353,76" SelectionChanged="ListBox_SelectionChanged"/>
+        <Button x:Name="BtnClick_Hjerm" Content="Hjerm" HorizontalAlignment="Left" Margin="20,50,0,0" VerticalAlignment="Top" Height="40" Width="85" Click="BtnClick_Hjerm_Click"/>
+        <Button x:Name="BtnClick_Raehr" Content="Raehr" HorizontalAlignment="Left" Margin="133,50,0,0" VerticalAlignment="Top" Height="40" Width="86" Click="BtnClick_Raehr_Click"/>
+        <Button x:Name="BtnClick_Videbaek" Content="Videbaek" HorizontalAlignment="Left" Margin="246,50,0,0" VerticalAlignment="Top" Height="40" Width="84" Click="BtnClick_Videbaek_Click"/>
+        <Button x:Name="BtnClick_Thorsminde" Content="Thorsminde" HorizontalAlignment="Left" Margin="360,50,0,0" VerticalAlignment="Top" Height="40" Width="85" Click="BtnClick_Thorsminde_Click"/>
+        <ComboBox x:Name="Dropdown_Film" HorizontalAlignment="Left" Margin="20,107,0,0" VerticalAlignment="Top" Width="427" SelectionChanged="Dropdown_Film_SelectionChanged"/>
+        <ComboBox x:Name="Dropdown_Forestillingsdato_Ledig" HorizontalAlignment="Left" Margin="20,143,0,0" VerticalAlignment="Top" Width="427" SelectionChanged="ComboBox_SelectionChanged"/>
+        <Button Content="Tilfoej" HorizontalAlignment="Left" Margin="172,382,0,0" VerticalAlignment="Top" Width="109" Click="Button_Click"/>
+    </Grid>
+</Page>

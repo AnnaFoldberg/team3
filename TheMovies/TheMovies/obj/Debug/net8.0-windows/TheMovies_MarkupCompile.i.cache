@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Bruger\source\repos\team3\TheMovies\TheMovies\obj\Debug\net8.0-windows\
+D:\C#\2.Semester\ProjectTheMovies\team3\TheMovies\TheMovies\obj\Debug\net8.0-windows\
 TheMovies
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\Bruger\source\repos\team3\TheMovies\TheMovies\App.xaml
-3-203383450
+D:\C#\2.Semester\ProjectTheMovies\team3\TheMovies\TheMovies\App.xaml
+42097255665
 
-22-459128236
-198-688555687
-View\MainView.xaml;View\MovieView.xaml;View\ProgramView.xaml;
+25-1765935149
+198-556154604
+View\Greeting.xaml;View\MainView.xaml;View\MovieView.xaml;View\ProgramView.xaml;
 
 True
 

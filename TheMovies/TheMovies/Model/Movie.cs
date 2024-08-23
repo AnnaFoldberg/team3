@@ -12,11 +12,11 @@ namespace TheMovies
             set { _title = value; }
         }
 
-        public TimeSpan Duration 
-        { 
-        
+        public TimeSpan Duration
+        {
+
             get { return _duration; }
-            set { _duration = value;  }
+            set { _duration = value; }
         }
 
         public string Genre
@@ -34,7 +34,7 @@ namespace TheMovies
 
         public string ToString()
         {
-            return $"Titel: {_title}, Varighed: { _duration}, Genre: { _genre}";
+            return $"Titel: {_title}, Varighed: {_duration}, Genre: {_genre}";
         }
     }
 }

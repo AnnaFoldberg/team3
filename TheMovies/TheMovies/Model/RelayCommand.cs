@@ -1,4 +1,3 @@
-using System;
 using System.Windows.Input;
 
 namespace TheMovies
@@ -13,7 +12,7 @@ namespace TheMovies
             // Her sættes _execute til Action execute, der tages som input
             // Hvis den er null, kaldes ArgumentNullException
             _execute = execute ?? throw new ArgumentNullException(nameof(execute));
-            
+
             // Her sættes _canExecute (som beslutter, om _execute kan ske) til input canExecute
             // canExecute sættes automatisk til null, hvis den ikke gives en værdi, når RelayCommand kaldes
             _canExecute = canExecute;
