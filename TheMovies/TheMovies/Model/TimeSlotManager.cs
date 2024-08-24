@@ -22,16 +22,22 @@ namespace TheMovies.Model
         // Might change later
         public void GenerateNewMonth(int year, int month)
         {
-            var MonthTS = new List<TimeSlot>();
-
             foreach (Cinema cinema in Enum.GetValues(typeof(Cinema)))
             {
                 foreach (Hall hall in Enum.GetValues(typeof(Hall)))
                 {
-                    for (int hour = 14; hour <= 20;  hour++)
+                    for (int day = 1; day <= DateTime.DaysInMonth(year, month); day++)
                     {
-                        var newTimeSlot = new TimeSlot ( cinema,hall, new DateOnly(year, month, 1).AddDays(DateTime.DaysInMonth(year, month) - 1), new TimeOnly(hour, 0) );
-                        MonthTS.Add(newTimeSlot);
+                        for (int hour = 14; hour <= 20; hour++)
+                        {
+                            var newTimeSlot = new TimeSlot(cinema, hall, new DateOnly(year, month, day), new TimeOnly(hour, 0));
+                            TimeSlotsMonth.Add(newTimeSlot);
+
+                            if (!TimeSlotsAll.TimeSlots.Contains(newTimeSlot))
+                            {
+                                TimeSlotsAll.Add(newTimeSlot);
+                            }
+                        }
                     }
                 }
             }
