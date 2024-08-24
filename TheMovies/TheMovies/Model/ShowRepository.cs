@@ -66,19 +66,19 @@ namespace TheMovies
         }
         private void InitializeShows()
         {
-            // Tilføj eksempler på forestillinger i januar og februar
-            showsByMonth[Month.January].Add(new Show(
+            // Tilføj eksempler på forestillinger i August (fra Objektmodel). Ayka vises den 10/08/2024 kl 13 i sal i Hjerm. The Wife vises samme dag med kl 16 i sal 2 i Ræhr
+            showsByMonth[Month.August].Add(new Show(
                 cinemas[0],  // Hjerm
-                halls[0],    // Hall 1
-                new Ts(new DateTime(2024, 1, 1, 19, 0, 0), new DateTime(2024, 1, 1, 21, 30, 0)),
+                halls[0],    // Sal 1
+                new Ts(new DateTime(2024, 10, 08, 13, 0, 0), new DateTime(2024, 10, 08, 13, 0, 0)),  //Vises i denne format DateTime(år, måned, dag, time, minut, sekund).
                 new Mov ("Ayka"),   // Ayka
                 new AdditionalTime(TimeSpan.FromMinutes(15))
             ));
 
-            showsByMonth[Month.February].Add(new Show(
+            showsByMonth[Month.August].Add(new Show(
                 cinemas[1],  // Ræhr
-                halls[1],    // Hall 2
-                new Ts(new DateTime(2024, 2, 14, 17, 0, 0), new DateTime(2024, 2, 14, 19, 45, 0)),
+                halls[1],    // Sal 2
+                new Ts(new DateTime(2024, 10, 08, 16, 0, 0), new DateTime(2024, 10, 08, 16, 0, 0)), //Vises i denne format DateTime(år, måned, dag, time, minut, sekund).
                 new Mov ("The Wife"),   // The Wife
                 new AdditionalTime(TimeSpan.FromMinutes(10))
             ));
@@ -130,7 +130,7 @@ namespace TheMovies
                 Console.WriteLine(show);
             }
 
-            // Vis alle forestillinger for hver måned
+            // Viser alle forestillinger for hver måned
             Console.WriteLine("\nAll Shows:");
             foreach (Month month in Enum.GetValues(typeof(Month)))
             {
