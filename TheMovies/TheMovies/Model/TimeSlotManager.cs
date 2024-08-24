@@ -9,7 +9,7 @@ namespace TheMovies.Model
 {
     public class TimeSlotManager
     {
-        public AdditionalTime AddedTime;
+        public AdditionalTime AddedTime { get; } = new AdditionalTime();
         public TimeSlotRepo TimeSlotsAll;
         public TimeSlotRepo TimeSlotsMonth;
         public TimeSlotRepo TimeSlotsMovie;
@@ -18,10 +18,13 @@ namespace TheMovies.Model
         {
 
         }
+
         // Using 'int' for month 
         // Might change later
         public void GenerateNewMonth(int year, int month)
         {
+            TimeSlotsMonth.TimeSlots.Clear();
+
             foreach (Cinema cinema in Enum.GetValues(typeof(Cinema)))
             {
                 foreach (Hall hall in Enum.GetValues(typeof(Hall)))
@@ -50,9 +53,9 @@ namespace TheMovies.Model
 
         }
 
-        public void GetAvailableMovieTS(ShowRepository showRepo, TimeSpan movDur)
-        {
+        //public void getavailablemoviets(showrepository showrepo, timespan movdur)
+        //{
 
-        }
+        //}
     }
 }
