@@ -107,15 +107,17 @@ namespace TheMovies
             return new List<Show>(); // Returnerer en tom liste, hvis måneden ikke findes
         }
 
+
+
         void Main()
         {
             ShowRepo repo = new ShowRepo(); // Opretter en instans af ShowRepo
 
-            // Tilføj en ny forestilling i april
+            // Tilføj en ny forestilling i april i Videbæk
             repo.AddShow(Month.April, new Show(
                 repo.cinemas[2],  // Videbæk
                 repo.halls[2],    // Hall 3
-                new Ts(new DateTime(2024, 4, 1, 16, 0, 0), new DateTime(2024, 4, 1, 18, 45, 0)),
+                new Ts(new DateTime(2024, 4, 1, 16, 0, 0), new DateTime(2024, 4, 1, 18, 45, 0)), // DateTime(år, måned, dag, time, minut, sekund).
                 new Mov ("1917"),   // 1917
                 new AdditionalTime(TimeSpan.FromMinutes(20))
             ));
