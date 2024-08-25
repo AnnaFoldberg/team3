@@ -138,5 +138,58 @@ namespace TheMovies.Tests
             Assert.IsNotNull(result, "The result should not be null.");
             Assert.AreEqual(0, result.Count, "The result should be an empty list as there are no time slots for this cinema in the specified month.");
         }
+
+        [TestMethod]
+        public void GetAvailableMovieTS_ReturnsCorrectAvailableTimeSlots()
+        {
+            // Arrange
+            // Set up the TimeSlotManager and the repositories
+            var timeSlotManager = new TimeSlotManager
+            {
+                TimeSlotsAll = new TimeSlotRepo(),
+                TimeSlotsMonth = new TimeSlotRepo()
+            };
+
+            // Define the test date and movie duration
+            var selectedDate = new DateOnly(2024, 8, 15);
+            var movieDuration = new TimeSpan(2, 0, 0); // 2 hours
+
+            // Set up TimeSlotsAll with some test data
+            timeSlotManager.TimeSlotsAll.Add(new TimeSlot(Cinema.Ræhr, Hall.One, selectedDate, new TimeOnly(13, 0)));
+            timeSlotManager.TimeSlotsAll.Add(new TimeSlot(Cinema.Ræhr, Hall.One, selectedDate, new TimeOnly(15, 0))); // Overlaps with the movie
+            timeSlotManager.TimeSlotsAll.Add(new TimeSlot(Cinema.Ræhr, Hall.One, selectedDate, new TimeOnly(17, 0)));
+
+            // Set up TimeSlotsMonth with some test data
+            timeSlotManager.TimeSlotsMonth.Add(new TimeSlot(Cinema.Ræhr, Hall.One, selectedDate, new TimeOnly(13, 0)));
+            timeSlotManager.TimeSlotsMonth.Add(new TimeSlot(Cinema.Ræhr, Hall.One, selectedDate, new TimeOnly(17, 0)));
+
+            // Act
+            var availableTimeSlots = timeSlotManager.GetAvailableMovieTS(selectedDate, movieDuration);
+
+            // Assert
+            // Define the expected available time slots
+            var expectedTimeSlots = new List<TimeSlot>
+            {
+                new TimeSlot(Cinema.Ræhr, Hall.One, selectedDate, new TimeOnly(17, 0))
+            };
+
+            Assert.AreEqual(expectedTimeSlots.Count, availableTimeSlots.Count, "The count of available time slots is incorrect.");
+
+            foreach (var expectedSlot in expectedTimeSlots)
+            {
+                bool found = availableTimeSlots.Any(ts =>
+                    ts.Cinema == expectedSlot.Cinema &&
+                    ts.Hall == expectedSlot.Hall &&
+                    ts.Date == expectedSlot.Date &&
+                    ts.Time == expectedSlot.Time);
+
+                Assert.IsTrue(found,
+                    $"Expected TimeSlot not found in available time slots: {expectedSlot.Cinema}, {expectedSlot.Hall}, {expectedSlot.Date} at {expectedSlot.Time}.");
+            }
+        }
+
+
+
+
     }
 }

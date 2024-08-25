@@ -14,6 +14,11 @@ namespace TheMovies.Model
         public TimeSpan Ads { get { return _ads; }}
         public TimeSpan Cleaning { get { return _cleaning; }}
 
+        public TimeSpan TotalAdditionalTime
+        {
+            get { return _ads + _cleaning; }
+        }
+        
         public AdditionalTime()
         {
         }
