@@ -83,5 +83,60 @@ namespace TheMovies.Tests
             Assert.AreEqual(new TimeSpan(0, 15, 0), addedTime.Ads);
             Assert.AreEqual(new TimeSpan(0, 15, 0), addedTime.Cleaning);
         }
+
+        [TestMethod]
+        public void GetCinemaMonth_ReturnsCorrectTimeSlots()
+        {
+            // Arrange
+            int year = 2024;
+            int month = 8; // August
+            Cinema cinema = Cinema.Ræhr;
+
+            // Generate the time slots for August
+            _timeSlotManager.GenerateNewMonth(year, month);
+
+            // Define the expected time slots for the given cinema and month
+            var expectedTimeSlots = new List<TimeSlot>
+    {
+        new TimeSlot(cinema, Hall.One, new DateOnly(year, month, 1), new TimeOnly(14, 0)),
+        // Add other expected time slots if applicable
+    };
+
+            // Act
+            var result = _timeSlotManager.GetCinemaMonth(cinema, month);
+
+            // Assert: Check that the returned time slots match the expected results
+            foreach (var expectedTimeSlot in expectedTimeSlots)
+            {
+                bool found = result.Any(ts =>
+                    ts.Cinema == expectedTimeSlot.Cinema &&
+                    ts.Hall == expectedTimeSlot.Hall &&
+                    ts.Date == expectedTimeSlot.Date &&
+                    ts.Time == expectedTimeSlot.Time);
+
+                Assert.IsTrue(found,
+                    $"Expected TimeSlot not found for Cinema {cinema} in month {month}: {expectedTimeSlot.Cinema}, {expectedTimeSlot.Hall}, {expectedTimeSlot.Date} at {expectedTimeSlot.Time}.");
+            }
+        }
+
+        [TestMethod]
+        public void GetCinemaMonth_ReturnsEmptyListForMonthWithNoTimeSlots()
+        {
+            // Arrange
+            int year = 2024;
+            int month = 2; // February
+            Cinema cinema = Cinema.Hjerm;
+
+            // Generate time slots for a different month
+            int otherMonth = 7; // July
+            _timeSlotManager.GenerateNewMonth(year, otherMonth);
+
+            // Act
+            var result = _timeSlotManager.GetCinemaMonth(cinema, month);
+
+            // Assert
+            Assert.IsNotNull(result, "The result should not be null.");
+            Assert.AreEqual(0, result.Count, "The result should be an empty list as there are no time slots for this cinema in the specified month.");
+        }
     }
 }
