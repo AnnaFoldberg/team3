@@ -132,3 +132,5 @@ G:\Visual Studio Projects\The Movies\team3\TheMovies\TheMovies\obj\Debug\net8.0-
 G:\Visual Studio Projects\The Movies\team3\TheMovies\TheMovies\obj\Debug\net8.0-windows\TheMovies.pdb
 G:\Visual Studio Projects\The Movies\team3\TheMovies\TheMovies\obj\Debug\net8.0-windows\TheMovies.genruntimeconfig.cache
 G:\Visual Studio Projects\The Movies\team3\TheMovies\TheMovies\obj\Debug\net8.0-windows\ref\TheMovies.dll
+G:\Visual Studio Projects\The Movies\team3\TheMovies\TheMovies\obj\Debug\net8.0-windows\View\Greeting.g.cs
+G:\Visual Studio Projects\The Movies\team3\TheMovies\TheMovies\obj\Debug\net8.0-windows\View\Greeting.baml

@@ -1,13 +1,6 @@
-using System.Text;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using TheMovies.View;
+using TheMovies.ViewModel;
 
 namespace TheMovies
 {
@@ -18,9 +11,21 @@ namespace TheMovies
     {
         public MainView()
         {
-            // InitializeComponent();
+            InitializeComponent();
+            MainViewModel vm = new MainViewModel();
 
-            // DataContext = new MainViewModel();
+            DataContext = vm;
+            Main.Content = new Greeting();
+        }
+
+        private void BtnClick_OpretFilm(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new MovieView();
+        }
+
+        private void BtnClick_Program(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new ProgramView();
         }
     }
 }

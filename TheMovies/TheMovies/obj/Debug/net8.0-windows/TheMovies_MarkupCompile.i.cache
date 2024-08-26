@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 G:\Visual Studio Projects\The Movies\team3\TheMovies\TheMovies\App.xaml
-3-203383450
+42097255665
 
-242041706096
+28-683710964
 198-1219573604
-View\MainView.xaml;View\MovieView.xaml;View\ProgramView.xaml;
+View\Greeting.xaml;View\MainView.xaml;View\MovieView.xaml;View\ProgramView.xaml;
 
-False
+True
 

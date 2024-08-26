@@ -6,7 +6,7 @@ using System.Windows.Input;
 using System.Diagnostics;
 using System.Windows;
 
-namespace TheMovies
+namespace TheMovies.ViewModel
 {
     public class MovieViewModel : INotifyPropertyChanged
     {

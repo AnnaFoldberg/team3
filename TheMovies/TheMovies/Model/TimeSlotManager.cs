@@ -9,7 +9,6 @@ namespace TheMovies.Model
 {
     public class TimeSlotManager
     {
-        // 
         public AdditionalTime AddedTime { get; }
         public TimeSlotRepo TimeSlotsAll {  get; } // Indeholder alle TimeSlots, inklusiv dem der er booket
         public TimeSlotRepo TimeSlotsAvailable { get; } // Indeholder alle TimeSlots for alle måneder, undtagen dem der er booket
@@ -17,14 +16,14 @@ namespace TheMovies.Model
         public TimeSlotRepo TimeSlotsMovie { get; } // Indeholder TimeSlots for den givne film og dato
 
 
-        public TimeSlotManager() 
+        public TimeSlotManager()
         {
             AddedTime = new AdditionalTime();
             TimeSlotsAll = new TimeSlotRepo();
             TimeSlotsAvailable = new TimeSlotRepo();
             TimeSlotsMonth = new TimeSlotRepo();
             TimeSlotsMovie = new TimeSlotRepo();
-            for (int month = 0; month < 12; month++)
+            for (Month month = Month.January; month <= Month.December; month++)
             {
                 GenerateNewMonth(2024, month);
             }
@@ -32,7 +31,7 @@ namespace TheMovies.Model
 
         // Remove from TimeSlotsAvailable when booked
         // This Should be used instead of directly calling Remove in the higher layers.
-        // It's to ensure that TimeSlots are not removed from TimeSlotsAll, so that we can compare against all previously created TimeSlots, when calling GenerateNewMonth.
+        // It's to ensure that TimeSlots are NOT removed from TimeSlotsAll, so that we can compare against all previously created TimeSlots, when calling GenerateNewMonth.
         // This tries to ensure that we don't remove a TimeSlot when booking it, and then later risk regenerating that timeslot and booking it again.
         public void BookTimeSlot(TimeSlot ts)
         {
@@ -41,9 +40,8 @@ namespace TheMovies.Model
             TimeSlotsMovie.Remove(ts);
         }
 
-        // Using 'int' for month 
-        // Might change later
-        public void GenerateNewMonth(int year, int month)
+        
+        public void GenerateNewMonth(int year, Month month)
         {
             TimeSlotsAvailable.TimeSlots.Clear();
 
@@ -51,11 +49,11 @@ namespace TheMovies.Model
             {
                 foreach (Hall hall in Enum.GetValues(typeof(Hall)))
                 {
-                    for (int day = 1; day <= DateTime.DaysInMonth(year, month); day++)
+                    for (int day = 1; day <= DateTime.DaysInMonth(year, Convert.ToInt32(month)); day++)
                     {
                         for (int hour = 14; hour <= 20; hour++)
                         {
-                            var newTimeSlot = new TimeSlot(cinema, hall, new DateOnly(year, month, day), new TimeOnly(hour, 0));
+                            var newTimeSlot = new TimeSlot(cinema, hall, new DateOnly(year, Convert.ToInt32(month), day), new TimeOnly(hour, 0));
 
                             // Add Only if it doesn't already exist in TimeSlotsAll
                             if (!TimeSlotsAll.TimeSlots.Contains(newTimeSlot))
@@ -69,15 +67,14 @@ namespace TheMovies.Model
             }
         }
 
-        // Using 'int' for month 
-        // Might change later
-        public void GetCinemaMonth(Cinema cinema, int month)
+        
+        public void GetCinemaMonth(Cinema cinema, Month month)
         {
             TimeSlotsMonth.TimeSlots.Clear();
 
             foreach (TimeSlot timeslot in TimeSlotsAvailable.TimeSlots)
             {
-                if (timeslot.Cinema == cinema && timeslot.Date.Month == month)
+                if (timeslot.Cinema == cinema && timeslot.Date.Month == Convert.ToInt32(month))
                 {
                     TimeSlotsMonth.Add(timeslot);
                 }
