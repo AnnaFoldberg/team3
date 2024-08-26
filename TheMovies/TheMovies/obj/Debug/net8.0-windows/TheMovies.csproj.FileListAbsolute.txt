@@ -107,3 +107,28 @@ C:\Users\Bruger\source\repos\team3\TheMovies\TheMovies\obj\Debug\net8.0-windows\
 C:\Users\Bruger\source\repos\team3\TheMovies\TheMovies\obj\Debug\net8.0-windows\TheMovies.pdb
 C:\Users\Bruger\source\repos\team3\TheMovies\TheMovies\obj\Debug\net8.0-windows\TheMovies.genruntimeconfig.cache
 C:\Users\Bruger\source\repos\team3\TheMovies\TheMovies\obj\Debug\net8.0-windows\ref\TheMovies.dll
+G:\Visual Studio Projects\The Movies\team3\TheMovies\TheMovies\obj\Debug\net8.0-windows\View\MainView.g.cs
+G:\Visual Studio Projects\The Movies\team3\TheMovies\TheMovies\obj\Debug\net8.0-windows\View\MovieView.g.cs
+G:\Visual Studio Projects\The Movies\team3\TheMovies\TheMovies\obj\Debug\net8.0-windows\View\ProgramView.g.cs
+G:\Visual Studio Projects\The Movies\team3\TheMovies\TheMovies\obj\Debug\net8.0-windows\App.g.cs
+G:\Visual Studio Projects\The Movies\team3\TheMovies\TheMovies\obj\Debug\net8.0-windows\TheMovies_MarkupCompile.cache
+G:\Visual Studio Projects\The Movies\team3\TheMovies\TheMovies\obj\Debug\net8.0-windows\TheMovies_MarkupCompile.lref
+G:\Visual Studio Projects\The Movies\team3\TheMovies\TheMovies\bin\Debug\net8.0-windows\TheMovies.exe
+G:\Visual Studio Projects\The Movies\team3\TheMovies\TheMovies\bin\Debug\net8.0-windows\TheMovies.deps.json
+G:\Visual Studio Projects\The Movies\team3\TheMovies\TheMovies\bin\Debug\net8.0-windows\TheMovies.runtimeconfig.json
+G:\Visual Studio Projects\The Movies\team3\TheMovies\TheMovies\bin\Debug\net8.0-windows\TheMovies.dll
+G:\Visual Studio Projects\The Movies\team3\TheMovies\TheMovies\bin\Debug\net8.0-windows\TheMovies.pdb
+G:\Visual Studio Projects\The Movies\team3\TheMovies\TheMovies\obj\Debug\net8.0-windows\View\MainView.baml
+G:\Visual Studio Projects\The Movies\team3\TheMovies\TheMovies\obj\Debug\net8.0-windows\View\MovieView.baml
+G:\Visual Studio Projects\The Movies\team3\TheMovies\TheMovies\obj\Debug\net8.0-windows\View\ProgramView.baml
+G:\Visual Studio Projects\The Movies\team3\TheMovies\TheMovies\obj\Debug\net8.0-windows\TheMovies.g.resources
+G:\Visual Studio Projects\The Movies\team3\TheMovies\TheMovies\obj\Debug\net8.0-windows\TheMovies.GeneratedMSBuildEditorConfig.editorconfig
+G:\Visual Studio Projects\The Movies\team3\TheMovies\TheMovies\obj\Debug\net8.0-windows\TheMovies.AssemblyInfoInputs.cache
+G:\Visual Studio Projects\The Movies\team3\TheMovies\TheMovies\obj\Debug\net8.0-windows\TheMovies.AssemblyInfo.cs
+G:\Visual Studio Projects\The Movies\team3\TheMovies\TheMovies\obj\Debug\net8.0-windows\TheMovies.csproj.CoreCompileInputs.cache
+G:\Visual Studio Projects\The Movies\team3\TheMovies\TheMovies\obj\Debug\net8.0-windows\TheMovies.sourcelink.json
+G:\Visual Studio Projects\The Movies\team3\TheMovies\TheMovies\obj\Debug\net8.0-windows\TheMovies.dll
+G:\Visual Studio Projects\The Movies\team3\TheMovies\TheMovies\obj\Debug\net8.0-windows\refint\TheMovies.dll
+G:\Visual Studio Projects\The Movies\team3\TheMovies\TheMovies\obj\Debug\net8.0-windows\TheMovies.pdb
+G:\Visual Studio Projects\The Movies\team3\TheMovies\TheMovies\obj\Debug\net8.0-windows\TheMovies.genruntimeconfig.cache
+G:\Visual Studio Projects\The Movies\team3\TheMovies\TheMovies\obj\Debug\net8.0-windows\ref\TheMovies.dll
