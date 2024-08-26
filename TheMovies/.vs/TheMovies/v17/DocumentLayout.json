@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "G:\\Visual Studio Projects\\The Movies\\team3\\TheMovies\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E51BD1EB-58C8-4C82-93D1-7BF038886087}|UnitTest TimeSlotManager\\UnitTests.csproj|g:\\visual studio projects\\the movies\\team3\\themovies\\unittest timeslotmanager\\unittest timeslotmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E51BD1EB-58C8-4C82-93D1-7BF038886087}|UnitTest TimeSlotManager\\UnitTests.csproj|solutionrelative:unittest timeslotmanager\\unittest timeslotmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{21EA30C9-D891-4CDA-8C70-D7E01D2C57AF}|TheMovies\\TheMovies.csproj|g:\\visual studio projects\\the movies\\team3\\themovies\\themovies\\model\\timeslotmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{21EA30C9-D891-4CDA-8C70-D7E01D2C57AF}|TheMovies\\TheMovies.csproj|solutionrelative:themovies\\model\\timeslotmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{21EA30C9-D891-4CDA-8C70-D7E01D2C57AF}|TheMovies\\TheMovies.csproj|g:\\visual studio projects\\the movies\\team3\\themovies\\themovies\\model\\timeslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21EA30C9-D891-4CDA-8C70-D7E01D2C57AF}|TheMovies\\TheMovies.csproj|solutionrelative:themovies\\model\\timeslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{21EA30C9-D891-4CDA-8C70-D7E01D2C57AF}|TheMovies\\TheMovies.csproj|g:\\visual studio projects\\the movies\\team3\\themovies\\themovies\\model\\additionaltime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21EA30C9-D891-4CDA-8C70-D7E01D2C57AF}|TheMovies\\TheMovies.csproj|solutionrelative:themovies\\model\\additionaltime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E51BD1EB-58C8-4C82-93D1-7BF038886087}|UnitTest TimeSlotManager\\UnitTests.csproj|g:\\visual studio projects\\the movies\\team3\\themovies\\unittest timeslotmanager\\unittest timeslotmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E51BD1EB-58C8-4C82-93D1-7BF038886087}|UnitTest TimeSlotManager\\UnitTests.csproj|solutionrelative:unittest timeslotmanager\\unittest timeslotmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{21EA30C9-D891-4CDA-8C70-D7E01D2C57AF}|TheMovies\\TheMovies.csproj|g:\\visual studio projects\\the movies\\team3\\themovies\\themovies\\model\\timeslotrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{21EA30C9-D891-4CDA-8C70-D7E01D2C57AF}|TheMovies\\TheMovies.csproj|solutionrelative:themovies\\model\\timeslotrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{21EA30C9-D891-4CDA-8C70-D7E01D2C57AF}|TheMovies\\TheMovies.csproj|g:\\visual studio projects\\the movies\\team3\\themovies\\themovies\\model\\additionaltime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21EA30C9-D891-4CDA-8C70-D7E01D2C57AF}|TheMovies\\TheMovies.csproj|solutionrelative:themovies\\model\\additionaltime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{21EA30C9-D891-4CDA-8C70-D7E01D2C57AF}|TheMovies\\TheMovies.csproj|g:\\visual studio projects\\the movies\\team3\\themovies\\themovies\\model\\timeslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21EA30C9-D891-4CDA-8C70-D7E01D2C57AF}|TheMovies\\TheMovies.csproj|solutionrelative:themovies\\model\\timeslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{21EA30C9-D891-4CDA-8C70-D7E01D2C57AF}|TheMovies\\TheMovies.csproj|g:\\visual studio projects\\the movies\\team3\\themovies\\themovies\\model\\cinema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
@@ -51,8 +51,7 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-23T13:05:35.062Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -65,12 +64,11 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-23T13:05:33.616Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "TimeSlot.cs",
               "DocumentMoniker": "G:\\Visual Studio Projects\\The Movies\\team3\\TheMovies\\TheMovies\\Model\\TimeSlot.cs",
               "RelativeDocumentMoniker": "TheMovies\\Model\\TimeSlot.cs",
@@ -79,18 +77,17 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-23T13:45:14.853Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "AdditionalTime.cs",
               "DocumentMoniker": "G:\\Visual Studio Projects\\The Movies\\team3\\TheMovies\\TheMovies\\Model\\AdditionalTime.cs",
               "RelativeDocumentMoniker": "TheMovies\\Model\\AdditionalTime.cs",
               "ToolTip": "G:\\Visual Studio Projects\\The Movies\\team3\\TheMovies\\TheMovies\\Model\\AdditionalTime.cs",
               "RelativeToolTip": "TheMovies\\Model\\AdditionalTime.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-23T13:05:30.577Z",
               "IsPinned": true,
@@ -104,21 +101,20 @@
               "RelativeDocumentMoniker": "TheMovies\\Model\\TimeSlotRepo.cs",
               "ToolTip": "G:\\Visual Studio Projects\\The Movies\\team3\\TheMovies\\TheMovies\\Model\\TimeSlotRepo.cs",
               "RelativeToolTip": "TheMovies\\Model\\TimeSlotRepo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-23T13:06:28.827Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "TimeSlotManager.cs",
               "DocumentMoniker": "G:\\Visual Studio Projects\\The Movies\\team3\\TheMovies\\TheMovies\\Model\\TimeSlotManager.cs",
               "RelativeDocumentMoniker": "TheMovies\\Model\\TimeSlotManager.cs",
-              "ToolTip": "G:\\Visual Studio Projects\\The Movies\\team3\\TheMovies\\TheMovies\\Model\\TimeSlotManager.cs*",
-              "RelativeToolTip": "TheMovies\\Model\\TimeSlotManager.cs*",
-              "ViewState": "AgIAAEwAAAAAAAAAAAAqwFYAAABFAAAAAAAAAA==",
+              "ToolTip": "G:\\Visual Studio Projects\\The Movies\\team3\\TheMovies\\TheMovies\\Model\\TimeSlotManager.cs",
+              "RelativeToolTip": "TheMovies\\Model\\TimeSlotManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFgAAABTAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-23T13:05:39.998Z",
               "IsPinned": true,
@@ -126,17 +122,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "UnitTest TimeSlotManager.cs",
               "DocumentMoniker": "G:\\Visual Studio Projects\\The Movies\\team3\\TheMovies\\UnitTest TimeSlotManager\\UnitTest TimeSlotManager.cs",
               "RelativeDocumentMoniker": "UnitTest TimeSlotManager\\UnitTest TimeSlotManager.cs",
-              "ToolTip": "G:\\Visual Studio Projects\\The Movies\\team3\\TheMovies\\UnitTest TimeSlotManager\\UnitTest TimeSlotManager.cs*",
-              "RelativeToolTip": "UnitTest TimeSlotManager\\UnitTest TimeSlotManager.cs*",
-              "ViewState": "AgIAAIEAAAAAAAAAAAAqwKwAAABWAAAAAAAAAA==",
+              "ToolTip": "G:\\Visual Studio Projects\\The Movies\\team3\\TheMovies\\UnitTest TimeSlotManager\\UnitTest TimeSlotManager.cs",
+              "RelativeToolTip": "UnitTest TimeSlotManager\\UnitTest TimeSlotManager.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAowKwAAABWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-24T20:31:43.791Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",

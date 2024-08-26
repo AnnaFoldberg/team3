@@ -9,9 +9,12 @@ namespace TheMovies.Model
 {
     public class TimeSlotRepo
     {
-        public List<TimeSlot> TimeSlots = new List<TimeSlot>();
+        public List<TimeSlot> TimeSlots;
 
-        public TimeSlotRepo() {}
+        public TimeSlotRepo() 
+        {
+            TimeSlots = new List<TimeSlot>();
+        }
 
         public void Add(TimeSlot ts)
         {
