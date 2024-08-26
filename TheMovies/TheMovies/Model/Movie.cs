@@ -5,6 +5,7 @@ namespace TheMovies
         private string _title;
         private TimeSpan _duration;
         private string _genre;
+        private string v;
 
         public string Title
         {
@@ -30,6 +31,11 @@ namespace TheMovies
             _title = title;
             _duration = duration;
             _genre = genre;
+        }
+
+        public Movie(string v)
+        {
+            this.v = v;
         }
 
         public string ToString()
