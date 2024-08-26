@@ -3,7 +3,8 @@ using System;
 
 namespace TheMovies
 {
-    public enum Month
+    // oversæt til dansk
+    public enum Month 
     {
         January = 1,
         February = 2,
