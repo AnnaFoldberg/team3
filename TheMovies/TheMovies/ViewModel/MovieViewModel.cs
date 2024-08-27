@@ -15,6 +15,8 @@ namespace TheMovies.ViewModel
         private string _title;
         private TimeSpan _duration;
         private string _genre;
+        private string _director;
+        private DateOnly _premiereDate;
 
         private string _message;
         
@@ -48,6 +50,26 @@ namespace TheMovies.ViewModel
             }
         }
 
+        public string Director
+        {
+            get { return _director; }
+            set
+            {
+                _director = value;
+                OnPropertyChanged(nameof(Director));
+            }
+        }
+
+        public DateOnly PremiereDate
+        {
+            get { return _premiereDate; }
+            set
+            {
+                _premiereDate = value;
+                OnPropertyChanged(nameof(PremiereDate));
+            }
+        }
+
         public string Message
         {
             get { return _message; }
@@ -76,19 +98,21 @@ namespace TheMovies.ViewModel
 
         public void AddMovie()
         {
-            Movie movie = new Movie(Title, Duration, Genre);
-            _movieRepo.Add(movie);
+            Movie movie = new Movie(Title, Duration, Genre, Director, PremiereDate);
+            MovieRepository.MovieRepo.Add(movie);
             // Movies.Add(movie);
             Title = string.Empty;
             Duration = TimeSpan.Zero;
             Genre = string.Empty;
+            Director = string.Empty;
+            PremiereDate = DateOnly.FromDateTime(DateTime.Now);
             Message = "Oprettet film: " + movie.ToString();
 
             // Bruges midlertidigt til at kunne se, at filmen findes i _movieRepo
-            foreach (var mov in _movieRepo.GetAll())
-            {
-                MessageBox.Show(mov.ToString()); 
-            }
+            // foreach (var mov in _movieRepo.GetAll())
+            // {
+            //     MessageBox.Show(mov.ToString()); 
+            // }
         }
 
         private void OnPropertyChanged(string propertyName = null)

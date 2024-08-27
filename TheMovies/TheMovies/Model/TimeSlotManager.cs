@@ -14,7 +14,7 @@ namespace TheMovies.Model
         public TimeSlotRepo TimeSlotsAvailable { get; } // Indeholder alle TimeSlots for alle måneder, undtagen dem der er booket
         public TimeSlotRepo TimeSlotsMonth {  get; } // Indeholder TimeSlots for måneden
         public TimeSlotRepo TimeSlotsMovie { get; } // Indeholder TimeSlots for den givne film og dato
-
+        public List<DateOnly> Dates { get; }
 
         public TimeSlotManager()
         {
@@ -23,7 +23,9 @@ namespace TheMovies.Model
             TimeSlotsAvailable = new TimeSlotRepo();
             TimeSlotsMonth = new TimeSlotRepo();
             TimeSlotsMovie = new TimeSlotRepo();
-            for (Month month = Month.January; month <= Month.December; month++)
+            Dates = new List<DateOnly>();
+            
+            for (Month month = Month.Januar; month <= Month.December; month++)
             {
                 GenerateNewMonth(2024, month);
             }
@@ -71,12 +73,14 @@ namespace TheMovies.Model
         public void GetCinemaMonth(Cinema cinema, Month month)
         {
             TimeSlotsMonth.TimeSlots.Clear();
+            Dates.Clear();
 
             foreach (TimeSlot timeslot in TimeSlotsAvailable.TimeSlots)
             {
                 if (timeslot.Cinema == cinema && timeslot.Date.Month == Convert.ToInt32(month))
                 {
                     TimeSlotsMonth.Add(timeslot);
+                    if (!Dates.Contains(timeslot.Date)) Dates.Add(timeslot.Date);
                 }
             }
         }

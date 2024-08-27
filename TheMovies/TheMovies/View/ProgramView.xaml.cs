@@ -10,14 +10,14 @@ namespace TheMovies
     public partial class ProgramView : Page
     {
         public Month SelectedEnumValue { get; set; }
+        public Movie SelectedMovie { get; set; }
+        public DateOnly SelectedDate { get; set; }
 
         public ProgramView()
         {
             InitializeComponent();
 
-            DataContext = new ProgramViewModel();
-
-            //Dropdown_Maanede.ItemsSource = Enum.GetValues(typeof(Month));
+            DataContext = new ProgramViewModel();            
 
         }
 

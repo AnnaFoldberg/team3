@@ -10,12 +10,17 @@
         <ComboBox x:Name="Dropdown_Maanede" HorizontalAlignment="Left" Margin="20,10,0,0" VerticalAlignment="Top" Width="427" SelectionChanged="Dropdown_Maanede_SelectionChanged"
                   ItemsSource="{Binding Months}"
                   SelectedItem="{Binding SelectedMonth}" />
-        <Button x:Name="BtnClick_Hjerm" Content="Hjerm" HorizontalAlignment="Left" Margin="20,50,0,0" VerticalAlignment="Top" Height="40" Width="85" Click="BtnClick_Hjerm_Click"/>
+        <Button x:Name="BtnClick_Hjerm" Content="Hjerm" HorizontalAlignment="Left" Margin="20,50,0,0" VerticalAlignment="Top" Height="40" Width="85" Click="BtnClick_Hjerm_Click"
+                Command="{Binding Hjerm}"/>
         <Button x:Name="BtnClick_Raehr" Content="Raehr" HorizontalAlignment="Left" Margin="133,50,0,0" VerticalAlignment="Top" Height="40" Width="86" Click="BtnClick_Raehr_Click"/>
         <Button x:Name="BtnClick_Videbaek" Content="Videbaek" HorizontalAlignment="Left" Margin="246,50,0,0" VerticalAlignment="Top" Height="40" Width="84" Click="BtnClick_Videbaek_Click"/>
         <Button x:Name="BtnClick_Thorsminde" Content="Thorsminde" HorizontalAlignment="Left" Margin="360,50,0,0" VerticalAlignment="Top" Height="40" Width="85" Click="BtnClick_Thorsminde_Click"/>
-        <ComboBox x:Name="Dropdown_Film" HorizontalAlignment="Left" Margin="20,107,0,0" VerticalAlignment="Top" Width="427" SelectionChanged="Dropdown_Film_SelectionChanged"/>
-        <ComboBox x:Name="Dropdown_Forestillingsdato_Ledig" HorizontalAlignment="Left" Margin="20,143,0,0" VerticalAlignment="Top" Width="427" SelectionChanged="ComboBox_SelectionChanged"/>
+        <ComboBox x:Name="Dropdown_Film" HorizontalAlignment="Left" Margin="20,107,0,0" VerticalAlignment="Top" Width="427" SelectionChanged="Dropdown_Film_SelectionChanged"
+                  ItemsSource="{Binding Movies}"
+                  SelectedItem="{Binding SelectedMovie}"/>
+        <ComboBox x:Name="Dropdown_Forestillingsdato_Ledig" HorizontalAlignment="Left" Margin="20,143,0,0" VerticalAlignment="Top" Width="427" SelectionChanged="ComboBox_SelectionChanged"
+                  ItemsSource="{Binding Dates}"
+                  SelectedItem="{Binding SelectedDate}"/>
         <ListBox x:Name="ListBox_TilgaengligSalOgTidspunkt" ItemsSource="{Binding }"
                  d:ItemsSource="{d:SampleData ItemCount=5}"
                  Margin="20,190,353,76"

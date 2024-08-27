@@ -3,11 +3,10 @@ using System;
 
 namespace TheMovies
 {
-    // oversæt til dansk
     public enum Month 
     {
-        January = 1,
-        February = 2,
+        Januar = 1,
+        Februar = 2,
         Marts = 3,
         April = 4,
         Maj = 5,

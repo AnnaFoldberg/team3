@@ -6,7 +6,7 @@ namespace TheMovies
 {
     public class MovieRepository : IRepo<Movie>
     {
-        private List<Movie> _movieRepo;
+        private static List<Movie> _movieRepo;
 
         // Specify the file path to save the CSV on the desktop
         private string desktopPath;
@@ -14,7 +14,7 @@ namespace TheMovies
 
         DataHandler moviesDataHandler = new DataHandler();
 
-        public List<Movie> MovieRepo
+        public static List<Movie> MovieRepo
         {
             get { return _movieRepo; }
             set { _movieRepo = value; }
@@ -30,22 +30,16 @@ namespace TheMovies
 
         public void Add(Movie movie)
         {
-            Movie mov = new Movie(movie.Title, movie.Duration, movie.Genre);
+            Movie mov = new Movie(movie.Title, movie.Duration, movie.Genre, movie.Director, movie.PremierDate);
             _movieRepo.Add(mov);
 
-            // Prepare the movie data in CSV format
-            string movieData = $"{movie.Title}, {movie.Duration}, {movie.Genre}{Environment.NewLine}";
-
-            moviesDataHandler.Save(movieData, filePath);
-
-            // Bruges midtlertidigt til at kunne se, at filmen blev oprettet korrekt
-            MessageBox.Show($"Film oprettet: {mov.ToString()}");
+            moviesDataHandler.Save(movie.ToString(), filePath);
         }
 
         // Bruges midlertidigt til at kunne se, at filmen findes i _movieRepo
-        public List<Movie> GetAll()
-        {
-            return _movieRepo;
-        }
+        // public List<Movie> GetAll()
+        // {
+        //     return _movieRepo;
+        // }
     }
 }

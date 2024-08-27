@@ -12,13 +12,6 @@ namespace TheMovies.ViewModel
     internal class ProgramViewModel : ViewModelBase
     {
         //public ObservableCollection<ShowCurrentMonth> ShowCurrentMonth { get; set; }
-        
-        
-        public ProgramViewModel()
-        {
-            Months = new ObservableCollection<Month>(Enum.GetValues(typeof(Month)) as Month[]);
-            SelectedMonth = Months[0];
-        }
 
         //private Show _selectedShow;
 
@@ -32,6 +25,8 @@ namespace TheMovies.ViewModel
         //}
 
         public ObservableCollection<Month> Months { get; }
+        public ObservableCollection<Movie> Movies { get; }
+        public ObservableCollection<DateOnly> Dates { get; set; }
 
         private Month _selectedMonth;
 
@@ -40,7 +35,7 @@ namespace TheMovies.ViewModel
             get => _selectedMonth;
             set
             {
-                if (_selectedMonth != value) 
+                if (_selectedMonth != value)
                 {
                     _selectedMonth = value;
                     OnPropertyChanged(nameof(SelectedMonth));
@@ -48,7 +43,6 @@ namespace TheMovies.ViewModel
             }
         }
 
-        
         private Cinema _selectedCinema;
 
         public Cinema SelectedCinema
@@ -64,21 +58,28 @@ namespace TheMovies.ViewModel
 
         public Movie SelectedMovie
         {
-            get { return _selectedMovie; }
+            get => _selectedMovie;
             set
             {
-                OnPropertyChanged();
+                if (_selectedMovie != value)
+                {
+                    _selectedMovie = value;
+                    OnPropertyChanged(nameof(SelectedMovie));
+                }
             }
         }
 
-        private DateTime _selectedDateTime;
-
-        public DateTime SelectedDateTime
+        private DateOnly _selectedDate;
+        public DateOnly SelectedDate
         {
-            get { return _selectedDateTime; }
+            get => _selectedDate;
             set
             {
-                OnPropertyChanged();
+                if (_selectedDate != value)
+                {
+                    _selectedDate = value;
+                    OnPropertyChanged(nameof(SelectedDate));
+                }
             }
         }
 
@@ -92,8 +93,54 @@ namespace TheMovies.ViewModel
                 OnPropertyChanged();
             }
         }
-        
 
+        private MovieRepository _movieRepo;
+        private TimeSlotManager _tsm;
+        private ShowRepo _showRepo;
 
+        public ObservableCollection<Show> Shows;
+
+        public ProgramViewModel()
+        {
+            Months = new ObservableCollection<Month>(Enum.GetValues(typeof(Month)) as Month[]);
+            SelectedMonth = Months[0];
+
+            Movies = new ObservableCollection<Movie>(MovieRepository.MovieRepo);
+
+            _tsm = new TimeSlotManager();
+
+            Shows = new ObservableCollection<Show>();
+
+            // SelectedDate = Dates[0];
+        }
+
+        public void RegisterCinemaMonth()
+        {
+            // public List<Show> GetShows(Month month, Cinema cin) -> Listen til højre
+            // ShowRepository.GetShows(SelectedMonth, SelectedCinema);
+
+            foreach (Show show in _showRepo.ShowsByMonth[SelectedMonth])
+            {
+                Shows.Add(show);
+            }
+
+            // public void GetCinemaMonth(Cinema cinema, Month month) -> Tider available på den valgte måned og biograf hentes og dates oprettes
+            _tsm.GetCinemaMonth(SelectedCinema, SelectedMonth);
+
+            Dates = new ObservableCollection<DateOnly>(_tsm.Dates);
+
+        }
+        //        // Assuming Shows is an ObservableCollection<Show>
+        //        ObservableCollection<Show> Shows = new ObservableCollection<Show>();
+
+        //        // Assuming _showRepo.ShowsByMonth[SelectedMonth] returns a List<Show>
+        //        List<Show> selectedMonthShows = _showRepo.ShowsByMonth[SelectedMonth];
+
+        //// Adding each Show from the list to the ObservableCollection
+        //foreach (var show in selectedMonthShows)
+        //{
+        //    Shows.Add(show);
+        //}
     }
+
 }
