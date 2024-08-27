@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-G:\Visual Studio Projects\The Movies\team3\TheMovies\TheMovies\obj\Debug\net8.0-windows\
+C:\Users\AnnaFoldberg\team3\TheMovies\TheMovies\obj\Debug\net8.0-windows\
 TheMovies
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-G:\Visual Studio Projects\The Movies\team3\TheMovies\TheMovies\App.xaml
+C:\Users\AnnaFoldberg\team3\TheMovies\TheMovies\App.xaml
 42097255665
 
-261806151328
-198-1219573604
+26-1340938583
+198-556154604
 View\Greeting.xaml;View\MainView.xaml;View\MovieView.xaml;View\ProgramView.xaml;
 
 False

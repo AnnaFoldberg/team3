@@ -30,7 +30,7 @@ namespace TheMovies
 
         public void Add(Movie movie)
         {
-            Movie mov = new Movie(movie.Title, movie.Duration, movie.Genre, movie.Director, movie.PremierDate);
+            Movie mov = new Movie(movie.Title, movie.Duration, movie.Genre, movie.Director, movie.PremiereDate);
             _movieRepo.Add(mov);
 
             moviesDataHandler.Save(movie.ToString(), filePath);

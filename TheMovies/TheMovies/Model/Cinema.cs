@@ -8,9 +8,9 @@ namespace TheMovies.Model
 {
     public enum Cinema
     {
-        Videbæk,
+        Videbaek,
         Hjerm,
         Thorsminde,
-        Ræhr
+        Raehr
     }
 }

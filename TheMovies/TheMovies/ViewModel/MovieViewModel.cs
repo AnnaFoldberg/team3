@@ -94,25 +94,19 @@ namespace TheMovies.ViewModel
         public MovieViewModel()
         {
             AddMovieCommand = new RelayCommand(AddMovie);
+            PremiereDate = DateOnly.FromDateTime(DateTime.Now);
         }
 
         public void AddMovie()
         {
             Movie movie = new Movie(Title, Duration, Genre, Director, PremiereDate);
             MovieRepository.MovieRepo.Add(movie);
-            // Movies.Add(movie);
             Title = string.Empty;
             Duration = TimeSpan.Zero;
             Genre = string.Empty;
             Director = string.Empty;
             PremiereDate = DateOnly.FromDateTime(DateTime.Now);
             Message = "Oprettet film: " + movie.ToString();
-
-            // Bruges midlertidigt til at kunne se, at filmen findes i _movieRepo
-            // foreach (var mov in _movieRepo.GetAll())
-            // {
-            //     MessageBox.Show(mov.ToString()); 
-            // }
         }
 
         private void OnPropertyChanged(string propertyName = null)

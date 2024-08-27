@@ -6,7 +6,7 @@ namespace TheMovies
         private TimeSpan _duration;
         private string _genre;
         private string _director;
-        private DateOnly _premierDate;
+        private DateOnly _premiereDate;
         private string v;  
 
         public string Title
@@ -28,10 +28,10 @@ namespace TheMovies
             set { _genre = value; }
         }
 
-        public DateOnly PremierDate
+        public DateOnly PremiereDate
         {
-            get { return _premierDate; }
-            set { _premierDate = value; }
+            get { return _premiereDate; }
+            set { _premiereDate = value; }
         }     
 
         public string Director
@@ -40,13 +40,13 @@ namespace TheMovies
             set { _director = value; }
         }
 
-        public Movie(string title, TimeSpan duration, string genre, string director,DateOnly premierDate)
+        public Movie(string title, TimeSpan duration, string genre, string director,DateOnly premiereDate)
         {
             _title = title;
             _duration = duration;
             _genre = genre;
             _director=director;
-            _premierDate=premierDate;
+            _premiereDate=premiereDate;
         }
 
         public Movie(string v)
@@ -56,7 +56,7 @@ namespace TheMovies
 
         public string ToString()
         {
-            return $"{_title}, { _duration}, { _genre}, { _director}, { _premierDate}{Environment.NewLine}";
+            return $"{_title}, { _duration}, { _genre}, { _director}, { _premiereDate}{Environment.NewLine}";
         }
     }
 }

@@ -3,12 +3,12 @@ using System.Windows.Input;
 
 namespace TheMovies
 {
-    public class RelayCommand : ICommand
+    public class RelayCommandT<T> : ICommand
     {
-        private readonly Action _execute;
-        private readonly Func<bool> _canExecute;
+        private readonly Action<T> _execute;
+        private readonly Func<T, bool> _canExecute;
 
-        public RelayCommand(Action execute, Func<bool> canExecute = null)
+        public RelayCommandT(Action<T> execute, Func<T, bool> canExecute = null)
         {
             // Her sættes _execute til Action execute, der tages som input
             // Hvis den er null, kaldes ArgumentNullException
@@ -29,12 +29,12 @@ namespace TheMovies
         // => syntaksen er en kortere måde at definere metoder, properties og andre medlemmer,
         // som kun består af en enkelt expression (f.eks. her tjekkes om _canExecute er null;
         // hvis ikke, kaldes _canExecute(), som i dette tilfælde ville være CanAddMovie, der returnerer enten true eller false).
-        public bool CanExecute(object parameter) => _canExecute == null || _canExecute();
+        public bool CanExecute(object parameter) => _canExecute == null || _canExecute((T)parameter);
 
         // Når man klikker på knappen, kommandoen er bundet til, kaldes Execute-kommandoen
         // Den executer _execute, som er givet som argument til RelayCommand constructoren
         // i form af Action execute
-        public void Execute(object parameter) => _execute();
+        public void Execute(object parameter) => _execute((T)parameter);
 
 
         // CanExecuteChanged fortæller WPF-framework'et, når resultatet af
