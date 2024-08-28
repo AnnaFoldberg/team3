@@ -24,7 +24,7 @@ namespace TheMovies.Model
             TimeSlotsMonth = new TimeSlotRepo();
             TimeSlotsMovie = new TimeSlotRepo();
             Dates = new List<DateOnly>();
-            
+
             for (Month month = Month.Januar; month <= Month.December; month++)
             {
                 GenerateNewMonth(2024, month);
@@ -69,21 +69,44 @@ namespace TheMovies.Model
             }
         }
 
-        
+        // Skal laves til at tage inputs der bruges
         public void GetCinemaMonth(Cinema cinema, Month month)
         {
-            TimeSlotsMonth.TimeSlots.Clear();
             Dates.Clear();
 
-            foreach (TimeSlot timeslot in TimeSlotsAvailable.TimeSlots)
+            int intMonth = Convert.ToInt32(month);
+
+            // Define the year and month
+            int year = 2024;
+
+            // Create a DateOnly object for the first day of the month
+            DateOnly startDate = new DateOnly(year, intMonth, 1);
+
+            // Get the number of days in the month
+            int daysInMonth = DateTime.DaysInMonth(year, intMonth);
+
+            // Loop through all days in the month
+            for (int day = 0; day < daysInMonth; day++)
             {
-                if (timeslot.Cinema == cinema && timeslot.Date.Month == Convert.ToInt32(month))
-                {
-                    TimeSlotsMonth.Add(timeslot);
-                    if (!Dates.Contains(timeslot.Date))
-                        Dates.Add(timeslot.Date);
-                }
+                // Add 'day' days to the startDate to get the current date
+                DateOnly currentDate = startDate.AddDays(day);
+
+                Dates.Add(currentDate);
             }
+
+
+            //TimeSlotsMonth.TimeSlots.Clear();
+            //Dates.Clear();
+
+            //foreach (TimeSlot timeslot in TimeSlotsAvailable.TimeSlots)
+            //{
+            //    if (timeslot.Cinema == cinema && timeslot.Date.Month == Convert.ToInt32(month))
+            //    {
+            //        TimeSlotsMonth.Add(timeslot);
+            //        if (!Dates.Contains(timeslot.Date))
+            //            Dates.Add(timeslot.Date);
+            //    }
+            //}
         }
 
         public void GetAvailableMovieTS(DateOnly selectedDate, TimeSpan movieDur)

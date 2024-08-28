@@ -59,15 +59,15 @@ namespace TheMovies.ViewModel
         }
 
 
-        private TimeSlot _selectedTimeSlot;
-        public TimeSlot SelectedTimeSlot
-        {
-            get { return _selectedTimeSlot; }
-            set
-            {
-                OnPropertyChanged();
-            }
-        }
+        //private TimeSlot _selectedTimeSlot;
+        //public TimeSlot SelectedTimeSlot
+        //{
+        //    get { return _selectedTimeSlot; }
+        //    set
+        //    {
+        //        OnPropertyChanged();
+        //    }
+        //}
 
         private MovieRepository _movieRepo;
         private ShowRepository _showRepo;
@@ -93,12 +93,13 @@ namespace TheMovies.ViewModel
             SelectCinemaCommand = new RelayCommandT<string>(ChooseCinema);
             Months = new ObservableCollection<Month>(Enum.GetValues(typeof(Month)) as Month[]);
             SelectedMonth = Months[0];
+            SelectedCinema = Cinema.Videbaek;
             Movies = new ObservableCollection<Movie>(MovieRepository.MovieRepo);
             _tsm = new TimeSlotManager();
             _showRepo = new ShowRepository();
             Shows = new ObservableCollection<Show>();
-            //Dates = new ObservableCollection<DateOnly>();
-            //PopulateDates();
+            Dates = new ObservableCollection<DateOnly>();
+            PopulateDates();
         }
 
         public void ChooseCinema(string parameter)
@@ -112,30 +113,54 @@ namespace TheMovies.ViewModel
             {
                 Message = "Ugyldig biograf";
             }
-            //GetCinemaMonth();
+            GetCinemaMonth();
+            PopulateDates();
+            //SelectedDate = Dates[0];
         }
 
 
-        //public void GetCinemaMonth() // Metoden crasher - find fejl
-        //{
-        //    Shows.Clear();
-        //    foreach (Show show in _showRepo.ShowsByMonth[SelectedMonth])
-        //    {
-        //        Shows.Add(show);
-        //    }
-        //    _tsm.GetCinemaMonth(SelectedCinema, SelectedMonth);
-        //    Dates = new ObservableCollection<DateOnly>();
-        //    PopulateDates();
-        //    SelectedDate = Dates[0];
-        //}
+        public void GetCinemaMonth() // Metoden crasher - find fejl
+        {
+            //Shows.Clear();
+            //foreach (Show show in _showRepo.ShowsByMonth[SelectedMonth])
+            //{
+            //    Shows.Add(show);
+            //}
+            //_tsm.GetCinemaMonth(SelectedCinema, SelectedMonth);
+        }
 
         // Method to populate Dates
         private void PopulateDates()
         {
-            // For example, adding some sample dates (you should replace this with your actual logic)
-            Dates.Add(new DateOnly(2024, 1, 1));
-            Dates.Add(new DateOnly(2024, 2, 1));
-            Dates.Add(new DateOnly(2024, 3, 1));
+            if (SelectedCinema != null && SelectedMonth != null)
+            {
+                _tsm.GetCinemaMonth(SelectedCinema, SelectedMonth);
+                Dates = new ObservableCollection<DateOnly>(_tsm.Dates);
+
+                //    int test = SelectedMonthIndex;
+
+                //switch (test)
+                //{ 
+                //        case 1:
+                //            SelectedMonth = Months[0];
+                //            break;
+                //        case Month.Februar:
+                //            SelectedMonth = Months[1];
+                //            break;
+                //        //case 3:
+                //        //    SelectedMonth = Months[2];
+                //    //SelectedMonth = Months[];
+                //}
+                //_tsm.GetCinemaMonth();
+
+                //Dates = new ObservableCollection<DateOnly>(_tsm.Dates);
+
+
+                // For example, adding some sample dates (you should replace this with your actual logic)
+                //Dates.Add(new DateOnly(2024, 1, 1));
+                //Dates.Add(new DateOnly(2024, 2, 1));
+                //Dates.Add(new DateOnly(2024, 3, 1));
+            }
         }
     }
 }

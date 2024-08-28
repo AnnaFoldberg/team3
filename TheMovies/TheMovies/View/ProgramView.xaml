@@ -13,8 +13,13 @@
         <Button x:Name="Videbaek" Content="Videbaek" HorizontalAlignment="Left" Margin="246,50,0,0" VerticalAlignment="Top" Height="40" Width="84" Command="{Binding SelectCinemaCommand}" CommandParameter="{Binding Content, RelativeSource={RelativeSource Self}}"/>
         <Button x:Name="Thorsminde" Content="Thorsminde" HorizontalAlignment="Left" Margin="360,50,0,0" VerticalAlignment="Top" Height="40" Width="85" Command="{Binding SelectCinemaCommand}" CommandParameter="{Binding Content, RelativeSource={RelativeSource Self}}"/>
         <ComboBox x:Name="Dropdown_Film" HorizontalAlignment="Left" Margin="20,107,0,0" VerticalAlignment="Top" Width="427" ItemsSource="{Binding Movies}" DisplayMemberPath="Title" SelectedItem="{Binding SelectedMovie}"/>
-        <ComboBox x:Name="Dropdown_Forestillingsdato_Ledig" HorizontalAlignment="Left" Margin="20,143,0,0" VerticalAlignment="Top" Width="427"
-                  ItemsSource="{Binding Dates}" SelectedItem="{Binding SelectedDate}">
+        <ComboBox x:Name="Dropdown_Forestillingsdato_Ledig"
+                  HorizontalAlignment="Left"
+                  Margin="20,143,0,0"
+                  VerticalAlignment="Top"
+                  Width="427"
+                  ItemsSource="{Binding Dates}"
+                  SelectedItem="{Binding SelectedDate}">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <TextBlock Text="{Binding StringFormat='{}{0:dd/MM/yyyy}'}" />
