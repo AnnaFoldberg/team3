@@ -1,6 +1,3 @@
-using System;
-using System.Windows.Input;
-
 namespace TheMovies
 {
     public class RelayCommand : RelayCommandT<object>

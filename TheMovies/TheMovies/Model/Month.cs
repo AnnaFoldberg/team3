@@ -1,6 +1,3 @@
-using System;
-
-
 namespace TheMovies
 {
     public enum Month 

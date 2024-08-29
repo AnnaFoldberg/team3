@@ -7,7 +7,6 @@ namespace TheMovies
         private string _genre;
         private string _director;
         private DateOnly _premiereDate;
-        private string v;  
 
         public string Title
         {
@@ -47,11 +46,6 @@ namespace TheMovies
             _genre = genre;
             _director=director;
             _premiereDate=premiereDate;
-        }
-
-        public Movie(string v)
-        {
-            this.v = v;
         }
 
         public string ToString()

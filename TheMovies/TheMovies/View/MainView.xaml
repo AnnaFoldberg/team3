@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TheMovies"
         mc:Ignorable="d"
-        Title="MainView" Height="450" Width="800">
+        Title="MainView" Height="450" Width="880">
         <Grid>
-        <StackPanel Orientation="Vertical" Height="435" VerticalAlignment="Top" HorizontalAlignment="Left">
-            <Button Content="Opret Film" MinWidth="100" Margin="5,50,0,0" Width="30" Click="BtnClick_OpretFilm"/>
-            <Button Content="Program" MinWidth="100" Margin="5,20,0,0" Width="30" Click="BtnClick_Program" />
+        <StackPanel Orientation="Vertical" Height="435" MinWidth="150" VerticalAlignment="Top" HorizontalAlignment="Left" Background="MistyRose">
+            <Button Content="Opret Film" MinWidth="100" Margin="5,50,0,0" Width="30" Click="BtnClick_OpretFilm" Background="HotPink"/>
+            <Button Content="Program" MinWidth="100" Margin="5,20,0,0" Width="30" Click="BtnClick_Program" Background="HotPink"/>
 
         </StackPanel>
-        <Frame x:Name="Main" Margin="110,0,0,0" NavigationUIVisibility="Hidden"/>        
+        <Frame x:Name="Main" Margin="150,0,0,0" NavigationUIVisibility="Hidden"/>        
         </Grid>
 </Window>

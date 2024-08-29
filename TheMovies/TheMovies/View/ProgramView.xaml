@@ -6,23 +6,121 @@
         xmlns:local="clr-namespace:TheMovies"
         mc:Ignorable="d"
         Title="ProgramView" Height="450" Width="800">
+    <Page.Resources>
+        <Style x:Key="CinemaButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Foreground" Value="Black"/>
+        </Style>
+    </Page.Resources>
     <Grid>
-        <ComboBox x:Name="Dropdown_Maanede" HorizontalAlignment="Left" Margin="20,10,0,0" VerticalAlignment="Top" Width="427" ItemsSource="{Binding Months}" SelectedItem="{Binding SelectedMonth}" />
-        <Button x:Name="Hjerm" Content="Hjerm" HorizontalAlignment="Left" Margin="20,50,0,0" VerticalAlignment="Top" Height="40" Width="85" Command="{Binding SelectCinemaCommand}" CommandParameter="{Binding Content, RelativeSource={RelativeSource Self}}"/>
-        <Button x:Name="Raehr" Content="Raehr" HorizontalAlignment="Left" Margin="133,50,0,0" VerticalAlignment="Top" Height="40" Width="86" Command="{Binding SelectCinemaCommand}" CommandParameter="{Binding Content, RelativeSource={RelativeSource Self}}"/>
-        <Button x:Name="Videbaek" Content="Videbaek" HorizontalAlignment="Left" Margin="246,50,0,0" VerticalAlignment="Top" Height="40" Width="84" Command="{Binding SelectCinemaCommand}" CommandParameter="{Binding Content, RelativeSource={RelativeSource Self}}"/>
-        <Button x:Name="Thorsminde" Content="Thorsminde" HorizontalAlignment="Left" Margin="360,50,0,0" VerticalAlignment="Top" Height="40" Width="85" Command="{Binding SelectCinemaCommand}" CommandParameter="{Binding Content, RelativeSource={RelativeSource Self}}"/>
+        <ComboBox x:Name="Dropdown_Maanede"
+                  HorizontalAlignment="Left"
+                  Margin="20,10,0,0"
+                  VerticalAlignment="Top"
+                  Width="427"
+                  ItemsSource="{Binding Months}"
+                  SelectedItem="{Binding SelectedMonth}"/>
+        <Button x:Name="Hjerm"
+                Content="Hjerm"
+                HorizontalAlignment="Left"
+                Margin="20,50,0,0"
+                VerticalAlignment="Top"
+                Height="40"
+                Width="85"
+                Command="{Binding SelectCinemaCommand}"
+                CommandParameter="{Binding Content, RelativeSource={RelativeSource Self}}">
+                <Button.Style>
+                    <Style TargetType="Button" BasedOn="{StaticResource CinemaButtonStyle}">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding SelectedCinema}" Value="Hjerm">
+                                <Setter Property="Background" Value="DeepPink"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+        </Button>
+        <Button x:Name="Raehr"
+                Content="Raehr"
+                HorizontalAlignment="Left"
+                Margin="133,50,0,0"
+                VerticalAlignment="Top"
+                Height="40"
+                Width="86"
+                Command="{Binding SelectCinemaCommand}"
+                CommandParameter="{Binding Content, RelativeSource={RelativeSource Self}}">
+            <Button.Style>
+                <Style TargetType="Button" BasedOn="{StaticResource CinemaButtonStyle}">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding SelectedCinema}" Value="Raehr">
+                            <Setter Property="Background" Value="HotPink"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+
+        <Button x:Name="Videbaek" Content="Videbaek" HorizontalAlignment="Left" Margin="246,50,0,0" VerticalAlignment="Top" Height="40" Width="84" Command="{Binding SelectCinemaCommand}" CommandParameter="{Binding Content, RelativeSource={RelativeSource Self}}">
+            <Button.Style>
+                <Style TargetType="Button" BasedOn="{StaticResource CinemaButtonStyle}">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding SelectedCinema}" Value="Videbaek">
+                            <Setter Property="Background" Value="Pink"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button x:Name="Thorsminde" Content="Thorsminde" HorizontalAlignment="Left" Margin="360,50,0,0" VerticalAlignment="Top" Height="40" Width="85" Command="{Binding SelectCinemaCommand}" CommandParameter="{Binding Content, RelativeSource={RelativeSource Self}}">
+            <Button.Style>
+                <Style TargetType="Button" BasedOn="{StaticResource CinemaButtonStyle}">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding SelectedCinema}" Value="Thorsminde">
+                            <Setter Property="Background" Value="MistyRose"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
         <ComboBox x:Name="Dropdown_Film" HorizontalAlignment="Left" Margin="20,107,0,0" VerticalAlignment="Top" Width="427" ItemsSource="{Binding Movies}" DisplayMemberPath="Title" SelectedItem="{Binding SelectedMovie}"/>
-        <ComboBox x:Name="Dropdown_Forestillingsdato_Ledig" HorizontalAlignment="Left" Margin="20,143,0,0" VerticalAlignment="Top" Width="427" ItemsSource="{Binding Dates}" SelectedItem="{Binding SelectedDate}"/>
-        <ListBox x:Name="ListBox_TilgaengligSalOgTidspunkt" ItemsSource="{Binding }" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="20,190,353,76"/>
-        <Button Content="Tilfoej" HorizontalAlignment="Left" Margin="172,382,0,0" VerticalAlignment="Top" Width="109"/>
-        <Label x:Name="lblMessage" Content="{Binding Message}" HorizontalAlignment="Left" Margin="40,382,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.675,-2.876"/>
-        <DataGrid ItemsSource="{Binding Shows}" Margin="474,10,140,48" CanUserAddRows="False" CanUserDeleteRows="False">
+        <ComboBox x:Name="Dropdown_Forestillingsdato_Ledig"
+                  HorizontalAlignment="Left"
+                  Margin="20,143,0,0"
+                  VerticalAlignment="Top"
+                  Width="427"
+                  ItemsSource="{Binding Dates}"
+                  SelectedItem="{Binding SelectedDate}">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding StringFormat='{}{0:dd/MM/yyyy}'}" />
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+
+        <ListBox x:Name="ListBox_TilgaengligSalOgTidspunkt"
+                 ItemsSource="{Binding TimeSlots}"
+                 SelectedItem="{Binding SelectedTimeSlot}"
+                 Margin="20,190,353,76">
+            <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding Time, StringFormat={}{0:HH:mm}}" Margin="5"/>
+                            <TextBlock Text="{Binding Hall}" Margin="5"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate> 
+            </ListBox>
+        <Button Content="Tilfoej" HorizontalAlignment="Left" Margin="172,382,0,0" VerticalAlignment="Top" Width="109" Command="{Binding AddShowCommand}"/>
+        <!-- <Label x:Name="lblMessage" Content="{Binding Message}" HorizontalAlignment="Left" Margin="40,382,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.675,-2.876"/> -->
+        <DataGrid ItemsSource="{Binding Shows}"
+                  Margin="474,10,100,48"
+                  CanUserAddRows="False"
+                  CanUserDeleteRows="False"
+                  AutoGenerateColumns="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Dato" Binding="{Binding Date}"/>
-                <DataGridTextColumn Header="Tidspunkt" Binding="{Binding Ts}"/>
-                <DataGridTextColumn Header="Film" Binding="{Binding Mov.Name}" />
-                <DataGridTextColumn Header="Sal" Binding="{Binding Hall}"/>
+                <DataGridTextColumn Header="Dato" Binding="{Binding Ts.Date, StringFormat={}{0:dd/MM/yyyy}}" Width="SizeToCells" />
+                <DataGridTextColumn Header="Tid" Binding="{Binding Ts.Time, StringFormat={}{0:HH:mm}}" Width="SizeToCells"/>
+                <DataGridTextColumn Header="Film" Binding="{Binding Mov.Title}" Width="SizeToCells"/>
+                <DataGridTextColumn Header="Sal" Binding="{Binding Hall}" Width="SizeToCells"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

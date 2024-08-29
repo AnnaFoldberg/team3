@@ -1,7 +1,3 @@
-using System;
-using System.Diagnostics;
-using System.Windows;
-
 namespace TheMovies
 {
     public class MovieRepository : IRepo<Movie>
@@ -35,11 +31,5 @@ namespace TheMovies
 
             moviesDataHandler.Save(movie.ToString(), filePath);
         }
-
-        // Bruges midlertidigt til at kunne se, at filmen findes i _movieRepo
-        // public List<Movie> GetAll()
-        // {
-        //     return _movieRepo;
-        // }
     }
 }
