@@ -117,8 +117,8 @@
                   CanUserDeleteRows="False"
                   AutoGenerateColumns="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Dato" Binding="{Binding Ts.Date, StringFormat={}{0:dd/MM/yyyy}}" Width="SizeToCells" />
-                <DataGridTextColumn Header="Tid" Binding="{Binding Ts.Time, StringFormat={}{0:HH:mm}}" Width="SizeToCells"/>
+                <DataGridTextColumn Header="Dato" Binding="{Binding Date, StringFormat={}{0:dd/MM/yyyy}}" Width="SizeToCells" />
+                <DataGridTextColumn Header="Tid" Binding="{Binding Time, StringFormat={}{0:HH:mm}}" Width="SizeToCells"/>
                 <DataGridTextColumn Header="Film" Binding="{Binding Mov.Title}" Width="SizeToCells"/>
                 <DataGridTextColumn Header="Sal" Binding="{Binding Hall}" Width="SizeToCells"/>
             </DataGrid.Columns>

@@ -146,7 +146,6 @@ namespace TheMovies.ViewModel
             Show show = new Show(SelectedTimeSlot, SelectedMovie, AddedTime);
             _showRepo.AddShow(SelectedMonth, show);
             _tsm.BookTimeSlot(SelectedTimeSlot, show.TotalDuration);
-            TimeSlots.Remove(SelectedTimeSlot);
             GetShowsMonth();
             GetAvailableMovieTS();
         }
