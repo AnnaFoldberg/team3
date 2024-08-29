@@ -7,7 +7,13 @@
         mc:Ignorable="d"
         Title="ProgramView" Height="450" Width="800">
     <Grid>
-        <ComboBox x:Name="Dropdown_Maanede" HorizontalAlignment="Left" Margin="20,10,0,0" VerticalAlignment="Top" Width="427" ItemsSource="{Binding Months}" SelectedItem="{Binding SelectedMonth}" />
+        <ComboBox x:Name="Dropdown_Maanede"
+                  HorizontalAlignment="Left"
+                  Margin="20,10,0,0"
+                  VerticalAlignment="Top"
+                  Width="427"
+                  ItemsSource="{Binding Months}"
+                  SelectedItem="{Binding SelectedMonth}"/>
         <Button x:Name="Hjerm" Content="Hjerm" HorizontalAlignment="Left" Margin="20,50,0,0" VerticalAlignment="Top" Height="40" Width="85" Command="{Binding SelectCinemaCommand}" CommandParameter="{Binding Content, RelativeSource={RelativeSource Self}}"/>
         <Button x:Name="Raehr" Content="Raehr" HorizontalAlignment="Left" Margin="133,50,0,0" VerticalAlignment="Top" Height="40" Width="86" Command="{Binding SelectCinemaCommand}" CommandParameter="{Binding Content, RelativeSource={RelativeSource Self}}"/>
         <Button x:Name="Videbaek" Content="Videbaek" HorizontalAlignment="Left" Margin="246,50,0,0" VerticalAlignment="Top" Height="40" Width="84" Command="{Binding SelectCinemaCommand}" CommandParameter="{Binding Content, RelativeSource={RelativeSource Self}}"/>
@@ -26,16 +32,36 @@
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
-        
-            <ListBox x:Name="ListBox_TilgaengligSalOgTidspunkt" ItemsSource="{Binding }" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="20,190,353,76"/>
-        <Button Content="Tilfoej" HorizontalAlignment="Left" Margin="172,382,0,0" VerticalAlignment="Top" Width="109"/>
+
+        <ListBox x:Name="ListBox_TilgaengligSalOgTidspunkt"
+                 ItemsSource="{Binding TimeSlots}"
+                 SelectedItem="{Binding SelectedTimeSlot}"
+                 Margin="20,190,353,76">
+            <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding Time, StringFormat={}{0:HH:mm}}" Margin="5"/>
+                            <TextBlock Text="{Binding Hall}" Margin="5"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate> 
+            </ListBox>
+        <Button Content="Tilfoej" HorizontalAlignment="Left" Margin="172,382,0,0" VerticalAlignment="Top" Width="109" Command="{Binding AddShowCommand}"/>
         <Label x:Name="lblMessage" Content="{Binding Message}" HorizontalAlignment="Left" Margin="40,382,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.675,-2.876"/>
-        <DataGrid ItemsSource="{Binding Shows}" Margin="474,10,140,48" CanUserAddRows="False" CanUserDeleteRows="False">
+        <DataGrid ItemsSource="{Binding Shows}"
+                  Margin="474,10,100,48"
+                  CanUserAddRows="False"
+                  CanUserDeleteRows="False"
+                  AutoGenerateColumns="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Dato" Binding="{Binding Date}"/>
-                <DataGridTextColumn Header="Tidspunkt" Binding="{Binding Ts}"/>
-                <DataGridTextColumn Header="Film" Binding="{Binding Mov.Name}"/>
-                <DataGridTextColumn Header="Sal" Binding="{Binding Hall}"/>
+                <DataGridTextColumn Header="Dato"
+                                    Binding="{Binding Ts.Date, StringFormat={}{0:dd/MM/yyyy}}" />
+                <DataGridTextColumn Header="Tidspunkt"
+                                    Binding="{Binding Ts.Time, StringFormat={}{0:HH:mm}}" />
+                <DataGridTextColumn Header="Film"
+                                    Binding="{Binding Mov.Title}" />
+                <DataGridTextColumn Header="Sal"
+                                    Binding="{Binding Hall}" />
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

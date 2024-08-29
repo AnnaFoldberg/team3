@@ -15,6 +15,11 @@ namespace TheMovies.ViewModel
                 {
                     _selectedMonth = value;
                     OnPropertyChanged(nameof(SelectedMonth));
+                    if (Dates != null)
+                    {
+                        Dates.Clear();
+                        PopulateDates();
+                    }
                 }
             }
         }
@@ -54,29 +59,37 @@ namespace TheMovies.ViewModel
                 {
                     _selectedDate = value;
                     OnPropertyChanged(nameof(SelectedDate));
+                    GetAvailableMovieTS();
                 }
             }
         }
 
 
-        //private TimeSlot _selectedTimeSlot;
-        //public TimeSlot SelectedTimeSlot
-        //{
-        //    get { return _selectedTimeSlot; }
-        //    set
-        //    {
-        //        OnPropertyChanged();
-        //    }
-        //}
+        private TimeSlot _selectedTimeSlot;
+        public TimeSlot SelectedTimeSlot
+        {
+            get => _selectedTimeSlot;
+            set
+            {
+                if (_selectedTimeSlot != value)
+                {
+                    _selectedTimeSlot = value;
+                    OnPropertyChanged(nameof(SelectedTimeSlot));
+                }
+            }
+        }
 
         private MovieRepository _movieRepo;
         private ShowRepository _showRepo;
         private TimeSlotManager _tsm;
-        public ObservableCollection<Show> Shows;
+        public ObservableCollection<Show> Shows { get; set; }
         public ObservableCollection<Month> Months { get; }
         public ObservableCollection<Movie> Movies { get; }
         public ObservableCollection<DateOnly> Dates { get; set; }
+        public ObservableCollection<TimeSlot> TimeSlots { get; set; }
         public RelayCommandT<string> SelectCinemaCommand { get; set; }
+        public RelayCommand AddShowCommand { get; set; }
+        public AdditionalTime AddedTime { get; set; }
         private string _message;
         public string Message
         {
@@ -91,14 +104,16 @@ namespace TheMovies.ViewModel
         public ProgramViewModel()
         {
             SelectCinemaCommand = new RelayCommandT<string>(ChooseCinema);
+            AddShowCommand = new RelayCommand(AddShow);
             Months = new ObservableCollection<Month>(Enum.GetValues(typeof(Month)) as Month[]);
-            SelectedMonth = Months[0];
-            SelectedCinema = Cinema.Videbaek;
+            SelectedMonth = Months[11];
             Movies = new ObservableCollection<Movie>(MovieRepository.MovieRepo);
             _tsm = new TimeSlotManager();
             _showRepo = new ShowRepository();
             Shows = new ObservableCollection<Show>();
             Dates = new ObservableCollection<DateOnly>();
+            TimeSlots = new ObservableCollection<TimeSlot>();
+            AddedTime = new AdditionalTime();
             PopulateDates();
         }
 
@@ -114,52 +129,76 @@ namespace TheMovies.ViewModel
                 Message = "Ugyldig biograf";
             }
             GetCinemaMonth();
-            PopulateDates();
-            //SelectedDate = Dates[0];
+        }
+
+        public void AddShow()
+        {
+            Show show = new Show(SelectedTimeSlot, SelectedMovie, AddedTime);
+            Shows.Add(show);
+            _showRepo.AddShow(SelectedMonth, show);
         }
 
 
         public void GetCinemaMonth() // Metoden crasher - find fejl
         {
-            //Shows.Clear();
-            //foreach (Show show in _showRepo.ShowsByMonth[SelectedMonth])
-            //{
-            //    Shows.Add(show);
-            //}
-            //_tsm.GetCinemaMonth(SelectedCinema, SelectedMonth);
+            GetShowsMonth();
+            PopulateDates();
+        }
+
+        // public void GetShowsMonth()
+        // {
+        //     if (Shows != null)
+        //     {
+        //         Shows.Clear();
+        //         foreach (Show show in _showRepo.ShowsByMonth[SelectedMonth])
+        //         {
+        //             Shows.Add(show);
+        //         }
+        //     }
+        // }
+
+        public void GetShowsMonth()
+        {
+            if (Shows != null)
+            {
+                Shows.Clear();
+                if (_showRepo.ShowsByMonth.TryGetValue(SelectedMonth, out var shows))
+                {
+                    foreach (Show show in shows)
+                    {
+                        if (show.Cinema == SelectedCinema)
+                        {
+                            Shows.Add(show);
+                        }
+                    }
+                }
+            }
+        }
+
+        public void GetAvailableMovieTS()
+        {
+            if (TimeSlots != null)
+            {
+                TimeSlots.Clear();
+                _tsm.GetAvailableMovieTS(SelectedDate, SelectedMovie.Duration);
+                foreach (TimeSlot timeslot in _tsm.TimeSlotsMovie.TimeSlots)
+                {
+                    TimeSlots.Add(timeslot);
+                }
+            }
         }
 
         // Method to populate Dates
         private void PopulateDates()
         {
-            if (SelectedCinema != null && SelectedMonth != null)
+            if (Dates != null)
             {
+                Dates.Clear();
                 _tsm.GetCinemaMonth(SelectedCinema, SelectedMonth);
-                Dates = new ObservableCollection<DateOnly>(_tsm.Dates);
-
-                //    int test = SelectedMonthIndex;
-
-                //switch (test)
-                //{ 
-                //        case 1:
-                //            SelectedMonth = Months[0];
-                //            break;
-                //        case Month.Februar:
-                //            SelectedMonth = Months[1];
-                //            break;
-                //        //case 3:
-                //        //    SelectedMonth = Months[2];
-                //    //SelectedMonth = Months[];
-                //}
-                //_tsm.GetCinemaMonth();
-
-                //Dates = new ObservableCollection<DateOnly>(_tsm.Dates);
-
-
-                // For example, adding some sample dates (you should replace this with your actual logic)
-                //Dates.Add(new DateOnly(2024, 1, 1));
-                //Dates.Add(new DateOnly(2024, 2, 1));
-                //Dates.Add(new DateOnly(2024, 3, 1));
+                foreach (DateOnly date in _tsm.Dates)
+                {
+                    Dates.Add(date);
+                }
             }
         }
     }

@@ -12,11 +12,11 @@ namespace TheMovies
             public AdditionalTime AdditionalTime { get; set; }
             public TimeSpan TotalDuration { get; set; }
 
-            public Show(Cinema cinema, Hall hall, TimeSlot timeslot, Movie movie, AdditionalTime additionalTime) //Constructor med 5 parametere Cinema, Hall, timeslot, Movie, AdditionalTime 
+            public Show(TimeSlot timeslot, Movie movie, AdditionalTime additionalTime) //Constructor med 5 parametere Cinema, Hall, timeslot, Movie, AdditionalTime 
             {
-                Cinema = cinema;
-                Hall = hall;
                 Ts = timeslot;
+                Cinema = Ts.Cinema;
+                Hall = Ts.Hall;
                 Mov = movie;
                 AdditionalTime = additionalTime;
                 TotalDuration = additionalTime.TotalAdditionalTime + Mov.Duration;

@@ -47,7 +47,7 @@ namespace TheMovies
                 ShowsByMonth[month] = new List<Show>();
             }
 
-            // InitializeShows(); // Kalder en metode som tilf�jer et par eksempler p� forestillinger. I dete tilf�lde Ayka og The Wife 
+            InitializeShows(); // Kalder en metode som tilf�jer et par eksempler p� forestillinger. I dete tilf�lde Ayka og The Wife 
         }
 
         // Metode til at tilf�je en forestilling til en bestemt m�ned
@@ -63,36 +63,57 @@ namespace TheMovies
             }
         }
 
+        public void InitializeShows()
+        {
+            TimeSpan duration1 = new TimeSpan(1, 30, 0);
+            TimeOnly time1 = new TimeOnly(14, 30);
+            DateOnly date1 = new DateOnly(2024, 12, 14);
+            TimeSlot timeSlot1 = new TimeSlot(Cinema.Videbaek, Hall.Two, date1, time1);
+            Movie movie1 = new Movie("Titel", duration1, "Genre", "Director", date1);
+            AdditionalTime addedTime1 = new();
+            Show show1 = new Show(timeSlot1, movie1, addedTime1);
+            AddShow(Month.December, show1);
+
+            TimeSpan duration2 = new TimeSpan(2, 30, 0);
+            TimeOnly time2 = new TimeOnly(15, 30);
+            DateOnly date2 = new DateOnly(2024, 12, 15);
+            TimeSlot timeSlot2 = new TimeSlot(Cinema.Videbaek, Hall.Two, date2, time2);
+            Movie movie2 = new Movie("Titel", duration2, "Genre", "Director", date2);
+            AdditionalTime addedTime2 = new();
+            Show show2 = new Show(timeSlot2, movie2, addedTime2);
+            AddShow(Month.December, show2);
+        }
+
         // Metode til at hente alle forestillinger for en given m�ned
         // public List<Show> GetShows(Month month, Cinema cin)
         // {
-            // if (ShowsByMonth.TryGetValue(month, out List<Show> shows))
-            // {
-            //     return shows; // Returnerer listen af forestillinger for m�neden
-            // }
-            // return new List<Show>(); // Returnerer en tom liste, hvis m�neden ikke findes
-
-        // }
-
-        // private void InitializeShows()
+        // if (ShowsByMonth.TryGetValue(month, out List<Show> shows))
         // {
-        //     // Tilf�j eksempler p� forestillinger i August (fra Objektmodel). Ayka vises den 10/08/2024 kl 13 i sal i Hjerm. The Wife vises samme dag med kl 16 i sal 2 i R�hr
-        //     ShowsByMonth[Month.August].Add(new Show(
-        //         cinemas[0],  // Hjerm
-        //         halls[0],    // Sal 1
-        //         new Ts(new DateTime(2024, 10, 08, 13, 0, 0), new DateTime(2024, 10, 08, 13, 0, 0)),  //Vises i denne format DateTime(�r, m�ned, dag, time, minut, sekund).
-        //         new Mov ("Ayka"),   // Ayka
-        //         new AdditionalTime(TimeSpan.FromMinutes(15))
-        //     ));
-
-        //     ShowsByMonth[Month.August].Add(new Show(
-        //         cinemas[1],  // R�hr
-        //         halls[1],    // Sal 2
-        //         new Ts(new DateTime(2024, 10, 08, 16, 0, 0), new DateTime(2024, 10, 08, 16, 0, 0)), //Vises i denne format DateTime(�r, m�ned, dag, time, minut, sekund).
-        //         new Mov ("The Wife"),   // The Wife
-        //         new AdditionalTime(TimeSpan.FromMinutes(10))
-        //     ));
+        //     return shows; // Returnerer listen af forestillinger for m�neden
         // }
+        // return new List<Show>(); // Returnerer en tom liste, hvis m�neden ikke findes
+
+        // }
+
+        //private void InitializeShows()
+        //{
+        //    // Tilf�j eksempler p� forestillinger i August (fra Objektmodel). Ayka vises den 10/08/2024 kl 13 i sal i Hjerm. The Wife vises samme dag med kl 16 i sal 2 i R�hr
+        //    ShowsByMonth[Month.August].Add(new Show(
+        //        cinemas[0],  // Hjerm
+        //        halls[0],    // Sal 1
+        //        new Ts(new DateTime(2024, 10, 08, 13, 0, 0), new DateTime(2024, 10, 08, 13, 0, 0)),  //Vises i denne format DateTime(�r, m�ned, dag, time, minut, sekund).
+        //        new Mov("Ayka"),   // Ayka
+        //        new AdditionalTime(TimeSpan.FromMinutes(15))
+        //    ));
+
+        //    ShowsByMonth[Month.August].Add(new Show(
+        //        cinemas[1],  // R�hr
+        //        halls[1],    // Sal 2
+        //        new Ts(new DateTime(2024, 10, 08, 16, 0, 0), new DateTime(2024, 10, 08, 16, 0, 0)), //Vises i denne format DateTime(�r, m�ned, dag, time, minut, sekund).
+        //        new Mov("The Wife"),   // The Wife
+        //        new AdditionalTime(TimeSpan.FromMinutes(10))
+        //    ));
+        //}
 
         // void Main()
         // {

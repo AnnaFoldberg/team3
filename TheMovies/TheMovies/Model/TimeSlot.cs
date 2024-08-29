@@ -20,10 +20,10 @@ namespace TheMovies.Model
 
         public TimeSlot(Cinema cinema, Hall hall, DateOnly date, TimeOnly time)
         {
-            _cinema = cinema;
-            _hall = hall;
-            _dateOnly = date;
-            _timeOnly = time;
+            Cinema = cinema;
+            Hall = hall;
+            Date = date;
+            Time = time;
         }
     }
 }

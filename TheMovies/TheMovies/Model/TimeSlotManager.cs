@@ -9,11 +9,11 @@ namespace TheMovies.Model
 {
     public class TimeSlotManager
     {
-        public AdditionalTime AddedTime { get; }
-        public TimeSlotRepo TimeSlotsAll {  get; } // Indeholder alle TimeSlots, inklusiv dem der er booket
-        public TimeSlotRepo TimeSlotsAvailable { get; } // Indeholder alle TimeSlots for alle måneder, undtagen dem der er booket
-        public TimeSlotRepo TimeSlotsMonth {  get; } // Indeholder TimeSlots for måneden
-        public TimeSlotRepo TimeSlotsMovie { get; } // Indeholder TimeSlots for den givne film og dato
+        public AdditionalTime AddedTime { get; set; }
+        public TimeSlotRepo TimeSlotsAll {  get; set; } // Indeholder alle TimeSlots, inklusiv dem der er booket
+        public TimeSlotRepo TimeSlotsAvailable { get; set; } // Indeholder alle TimeSlots for alle måneder, undtagen dem der er booket
+        public TimeSlotRepo TimeSlotsMonth {  get; set; } // Indeholder TimeSlots for måneden
+        public TimeSlotRepo TimeSlotsMovie { get; set; } // Indeholder TimeSlots for den givne film og dato
         public List<DateOnly> Dates { get; set; }
 
         public TimeSlotManager()
