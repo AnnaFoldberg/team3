@@ -9,21 +9,20 @@
       Title="Greeting">
 
     
-    <Grid Background="#80000000">
+    <Grid Background="Pink">
         <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
             <TextBlock Text="Welcome MJ-PIF"
                        FontSize="48"
                        FontWeight="Bold"
-                       Foreground="White"
+                       Foreground="Black"
                        HorizontalAlignment="Center"
                        Margin="0,0,0,20"/>
             <TextBlock Text="$$$"
                        FontSize="52"
                        FontStyle="Italic"
-                       Foreground="White"
+                       Foreground="Green"
                        HorizontalAlignment="Center"
                        Margin="0,0,0,40"/>
             </StackPanel>
     </Grid>
-    
 </Page>

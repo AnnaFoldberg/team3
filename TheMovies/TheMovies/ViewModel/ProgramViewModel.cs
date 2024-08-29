@@ -17,8 +17,11 @@ namespace TheMovies.ViewModel
                     OnPropertyChanged(nameof(SelectedMonth));
                     if (Dates != null)
                     {
-                        Dates.Clear();
                         PopulateDates();
+                    }
+                    if (Shows != null)
+                    {
+                        GetShowsMonth();
                     }
                 }
             }
@@ -27,11 +30,18 @@ namespace TheMovies.ViewModel
         private Cinema _selectedCinema;
         public Cinema SelectedCinema
         {
-            get { return _selectedCinema; }
+            get => _selectedCinema;
             set
             {
-                _selectedCinema = value;
-                OnPropertyChanged(nameof(SelectedCinema));
+                if (_selectedCinema != value)
+                {
+                    _selectedCinema = value;
+                    OnPropertyChanged(nameof(SelectedCinema));
+                    if (Shows != null)
+                    {
+                        GetShowsMonth();
+                    }
+                }
             }
         }
 
@@ -45,6 +55,10 @@ namespace TheMovies.ViewModel
                 {
                     _selectedMovie = value;
                     OnPropertyChanged(nameof(SelectedMovie));
+                    if (Dates != null)
+                    {
+                        PopulateDates();
+                    }
                 }
             }
         }
@@ -59,7 +73,10 @@ namespace TheMovies.ViewModel
                 {
                     _selectedDate = value;
                     OnPropertyChanged(nameof(SelectedDate));
-                    GetAvailableMovieTS();
+                    if (TimeSlots != null)
+                    {
+                        GetAvailableMovieTS();
+                    }
                 }
             }
         }
@@ -106,7 +123,7 @@ namespace TheMovies.ViewModel
             SelectCinemaCommand = new RelayCommandT<string>(ChooseCinema);
             AddShowCommand = new RelayCommand(AddShow);
             Months = new ObservableCollection<Month>(Enum.GetValues(typeof(Month)) as Month[]);
-            SelectedMonth = Months[11];
+            SelectedMonth = Months[0];
             Movies = new ObservableCollection<Movie>(MovieRepository.MovieRepo);
             _tsm = new TimeSlotManager();
             _showRepo = new ShowRepository();
@@ -114,7 +131,6 @@ namespace TheMovies.ViewModel
             Dates = new ObservableCollection<DateOnly>();
             TimeSlots = new ObservableCollection<TimeSlot>();
             AddedTime = new AdditionalTime();
-            PopulateDates();
         }
 
         public void ChooseCinema(string parameter)
@@ -122,40 +138,18 @@ namespace TheMovies.ViewModel
             if (Enum.TryParse(parameter, out Cinema cinema))
             {
                 SelectedCinema = cinema;
-                Message = $"SelectedCinema: {parameter}";
             }
-            else
-            {
-                Message = "Ugyldig biograf";
-            }
-            GetCinemaMonth();
         }
 
         public void AddShow()
         {
             Show show = new Show(SelectedTimeSlot, SelectedMovie, AddedTime);
-            Shows.Add(show);
             _showRepo.AddShow(SelectedMonth, show);
-        }
-
-
-        public void GetCinemaMonth() // Metoden crasher - find fejl
-        {
+            _tsm.BookTimeSlot(SelectedTimeSlot, show.TotalDuration);
+            TimeSlots.Remove(SelectedTimeSlot);
             GetShowsMonth();
-            PopulateDates();
+            GetAvailableMovieTS();
         }
-
-        // public void GetShowsMonth()
-        // {
-        //     if (Shows != null)
-        //     {
-        //         Shows.Clear();
-        //         foreach (Show show in _showRepo.ShowsByMonth[SelectedMonth])
-        //         {
-        //             Shows.Add(show);
-        //         }
-        //     }
-        // }
 
         public void GetShowsMonth()
         {
@@ -175,20 +169,6 @@ namespace TheMovies.ViewModel
             }
         }
 
-        public void GetAvailableMovieTS()
-        {
-            if (TimeSlots != null)
-            {
-                TimeSlots.Clear();
-                _tsm.GetAvailableMovieTS(SelectedDate, SelectedMovie.Duration);
-                foreach (TimeSlot timeslot in _tsm.TimeSlotsMovie.TimeSlots)
-                {
-                    TimeSlots.Add(timeslot);
-                }
-            }
-        }
-
-        // Method to populate Dates
         private void PopulateDates()
         {
             if (Dates != null)
@@ -201,8 +181,19 @@ namespace TheMovies.ViewModel
                 }
             }
         }
+
+        public void GetAvailableMovieTS()
+        {
+            if (TimeSlots != null)
+            {
+                TimeSlots.Clear();
+                _tsm.GetAvailableMovieTS(SelectedCinema, SelectedDate, SelectedMovie.Duration);
+                foreach (TimeSlot timeslot in _tsm.TimeSlotsMovie.TimeSlots)
+                {
+                    TimeSlots.Add(timeslot);
+                }
+            }
+        }
+
     }
 }
-
-// Gør så GetCinemaMonth ikke crasher -> Dates vises i dropdown + Shows vises til højre
-// Få TimeSlots til at vises (tidspunkt og sal, der matcher dato)

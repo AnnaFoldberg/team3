@@ -1,11 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Windows.Input;
-using System.Diagnostics;
-using System.Windows;
-
 namespace TheMovies.ViewModel
 {
     public class MovieViewModel : INotifyPropertyChanged
@@ -82,13 +75,6 @@ namespace TheMovies.ViewModel
 
         private MovieRepository _movieRepo = new MovieRepository();
 
-        // public ObservableCollection<Movie> Movies { get; set; } = new ObservableCollection<Movie>();
-        
-        // Den første => bruges som en expression-bodied property, hvilket er en kortere måde
-        // at definere en property, som returnerer en enkelt expression.
-        // I dette tilfælde returneres en ny RelayCommand instans.
-        // Lambda udtrykket () => AddMovie() skaber en Action delegate, som RelayCommand bruger som
-        // Execute metode.
         public RelayCommand AddMovieCommand { get; }
 
         public MovieViewModel()

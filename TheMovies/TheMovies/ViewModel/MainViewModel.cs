@@ -1,12 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TheMovies.ViewModel
+﻿namespace TheMovies.ViewModel
 {
-    internal class MainViewModel
+    internal class MainViewModel : ViewModelBase
     {
+
+        //private void ShowGreeting()
+        //{
+        //    Main.Content = new Greeting();
+        //}
+
+        //private void ShowMovieView()
+        //{
+        //    Main.Content = new MovieView();
+        //}
+
+        //private void ShowProgramView()
+        //{
+        //    Main.Content = new ProgramView();
+        //}
     }
 }
