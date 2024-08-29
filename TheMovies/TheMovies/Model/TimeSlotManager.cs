@@ -4,8 +4,8 @@ namespace TheMovies.Model
     {
         public AdditionalTime AddedTime { get; set; }
         public TimeSlotRepo TimeSlotsAll {  get; set; } // Indeholder alle TimeSlots, inklusiv dem der er booket
-        public TimeSlotRepo TimeSlotsAvailable { get; set; } // Indeholder alle TimeSlots for alle måneder, undtagen dem der er booket
-        public TimeSlotRepo TimeSlotsMonth {  get; set; } // Indeholder TimeSlots for måneden
+        public TimeSlotRepo TimeSlotsAvailable { get; set; } // Indeholder alle TimeSlots for alle mï¿½neder, undtagen dem der er booket
+        public TimeSlotRepo TimeSlotsMonth {  get; set; } // Indeholder TimeSlots for mï¿½neden
         public TimeSlotRepo TimeSlotsMovie { get; set; } // Indeholder TimeSlots for den givne film og dato
         public List<DateOnly> Dates { get; set; }
 
@@ -91,13 +91,11 @@ namespace TheMovies.Model
         public void GetAvailableMovieTS(Cinema selectedCinema, DateOnly selectedDate, TimeSpan movieDur)
         {
             // Calculate the total duration of the movie including ads and cleaning
-            TimeSpan totalDuration = movieDur + AddedTime.TotalAdditionalTime;
+            TimeSpan totalDuration = movieDur + AddedTime.TotalAdditionalTime; // 1 t 30 min
             TimeSlotsMovie.TimeSlots.Clear();
 
-            /////////////
-
-            int roundedDur = (int)Math.Ceiling(totalDuration.TotalHours);
-            foreach (TimeSlot ts in TimeSlotsAvailable.TimeSlots)
+            int roundedDur = (int)Math.Ceiling(totalDuration.TotalHours); // 2
+            foreach (TimeSlot ts in TimeSlotsAvailable.TimeSlots) // 14.00, 16.00
             {
                 if (ts.Date == selectedDate)
                 {
@@ -106,9 +104,9 @@ namespace TheMovies.Model
                         bool availableForMovie = true;
                         for (int i = 0; i < roundedDur; i++)
                         {
-                            TimeSlot tempTs = ts;
-                            tempTs.Time = tempTs.Time.AddHours(i);
-                            if (TimeSlotsAll.TimeSlots.Contains(tempTs) && !TimeSlotsAvailable.TimeSlots.Contains(tempTs))
+                            TimeSlot tempTs = ts; // tempTs = 14.00
+                            tempTs.Time = tempTs.Time.AddHours(i); // 0: tempTs = 14.00, 1: 15.00
+                            if (TimeSlotsAll.TimeSlots.Contains(tempTs) && !TimeSlotsAvailable.TimeSlots.Contains(tempTs)) // 0: TsAll: 14.00, 15.00, 16.00 contains 14.00 = true, TsAv: 14.00, 16.00 contains 14.00 = true, 1: TsAll = true, TsAv = false
                             {
                                 availableForMovie = false;
                             }
@@ -118,87 +116,8 @@ namespace TheMovies.Model
                             TimeSlotsMovie.Add(ts);
                         }
                     }
-                // Find om TimeSlotsAll tid findes, som ikke findes i TimeSlotsAvailable
-                // 
                 }
             }
-
-            // TimeSlotsAll: 14.00, 15.00, 16.00, 17.00
-            // TimeSlotsAvailable: 14.00, 16.00, 17.00
-            // totalDuration: 1 t 30 min
-            // Andet show: 15.00-16.30
-            // Eftersom et andet show kører 15.00, kan en ny 1 t 30 min lang film ikke køre klokken 14.00. Vi skal fange de forrige tider - efterfølgende tider fanges i Book...
-            // Altså findes 14.00 i TimeSlotsAvailable (for den er available til en film på <1 time), men den skal ikke være i TimeSlotsMovie for filen på 1 t 30 min.
-
-
-            // for (int i = 1; i < roundedDur + 1; i++)
-            // {
-            //     TimeSlot overlapTs = ts;
-            //     overlapTs.Time = ts.Time.AddHours(i);
-            //     TimeSlotsAvailable.Remove(overlapTs);
-            // }
-
-
-
-            /////////////
-
-            // // Iterate through each TimeSlot in TimeSlotsAvailable
-            // foreach (TimeSlot potentialSlot in TimeSlotsAvailable.TimeSlots)
-            // {
-            //     // We only care about time slots on the selected date
-            //     if (potentialSlot.Date != selectedDate)
-            //         continue;
-
-            //     // Calculate the end time for this potential slot
-            //     TimeOnly endTime = potentialSlot.Time.Add(totalDuration);
-            //     bool isAvailable = true;
-
-            //     // Check all TimeSlots between StartTime and EndTime for overlaps
-            //     for (TimeOnly currentTime = potentialSlot.Time; currentTime < endTime; currentTime = currentTime.AddHours(1))
-            //     {
-            //         bool timeSlotExistsInTimeSlotsAll = false;
-            //         bool timeSlotExistsInTimeSlotsAvailable = false;
-
-            //         // Iterate through TimeSlotsAll to check for overlaps
-            //         foreach (TimeSlot ts in TimeSlotsAll.TimeSlots)
-            //         {
-            //             if (ts.Cinema == potentialSlot.Cinema &&
-            //                 ts.Hall == potentialSlot.Hall &&
-            //                 ts.Date == potentialSlot.Date &&
-            //                 ts.Time == currentTime)
-            //             {
-            //                 timeSlotExistsInTimeSlotsAll = true;
-            //                 break;
-            //             }
-            //         }
-
-            //         // Iterate through TimeSlotsAvailable to check if the slot exists there
-            //         foreach (TimeSlot ts in TimeSlotsAvailable.TimeSlots)
-            //         {
-            //             if (ts.Cinema == potentialSlot.Cinema &&
-            //                 ts.Hall == potentialSlot.Hall &&
-            //                 ts.Date == potentialSlot.Date &&
-            //                 ts.Time == currentTime)
-            //             {
-            //                 timeSlotExistsInTimeSlotsAvailable = true;
-            //                 break;
-            //             }
-            //         }
-
-            //         // If the TimeSlot exists in TimeSlotsAll but not in TimeSlotsAvailable, it's not available
-            //         if (timeSlotExistsInTimeSlotsAll && !timeSlotExistsInTimeSlotsAvailable)
-            //         {
-            //             isAvailable = false;
-            //             break;
-            //         }
-            //     }
-
-            //     // If all required TimeSlots are available, add the potentialSlot to the available list
-            //     if (isAvailable)
-            //     {
-            //         TimeSlotsMovie.Add(potentialSlot);
-            //     }
-            // }
         }
     }
 }
